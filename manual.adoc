@@ -2,9 +2,7 @@
 William F. de Araújo <williampigmeu@gmail.com>
 v0.3, 02-16-2020
 :toc: left
-:stylesheet: medium.css
 :icons: font
-:stylesdir: css
 
 :icon-resource: image:icons/resource.png[Resource, title="Resource", width=25]
 :icon-blocked: image:icons/blocked.png[Blocked, title="Blocked", width=25]
