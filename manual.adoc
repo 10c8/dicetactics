@@ -1,0 +1,244 @@
+= Dice Tactics
+William F. de Araújo <williampigmeu@gmail.com>
+v0.1, 02-15-2020
+
+:stylesheet: medium.css
+:icons: font
+:stylesdir: css
+
+:toc: left
+
+:icon-resource: image:icons/resource.png[Resource, title="Resource", width=25]
+:icon-target: image:icons/target.png[Target, title="Target", width=23]
+:icon-marker: image:icons/operation.png[Operation Marker, title="Operation Marker", width=24]
+:icon-tank: image:icons/tank.png[Tank, title="Tank", width=23]
+:icon-squad: image:icons/squad.png[Squad, title="Squad", width=23]
+
+:icon-ground-big: image:icons/ground.png[Ground, title="Ground", width=42]
+:icon-water-big: image:icons/water.png[Water, title="Water", width=42]
+:icon-bridge-big: image:icons/bridge.png[Bridge, title="Bridge", width=42]
+:icon-forest-big: image:icons/forest.png[Forest, title="Forest", width=42]
+:icon-hill-big: image:icons/hill.png[Hill, title="Hill", width=42]
+:icon-village-big: image:icons/village.jpg[Village, title="Village", width=42]
+:icon-tower-big: image:icons/tower.png[Tower, title="Tower", width=42]
+:icon-ballista-big: image:icons/ballista.png[Ballista, title="Ballista", width=42]
+:icon-windmill-big: image:icons/windmill.png[Windmill, title="Windmill", width=42]
+
+
+== Setting Up the Battlefield
+Before you can start fighting for control, you need to prepare the game board:
+
+. Set the {icon-target} *Target* die to 2.
+. Place the {icon-marker} *Operation Marker* on the first space of the Operation Track.-. Add 2 {icon-tank} *Tanks* to each Player's Supply.
+. Give each player 4 {icon-squad} *Squads* and 3 {icon-resource} *Resources*.
+. Starting with the *second* player, each player chooses a side, then places all of their {icon-squad} *Squads* on that side's spawn points.
+. Deal 4 Action Cards to each player. Each player keeps one and hands the rest to the other. Repeat until each player has 2 Action Cards on their hand. The rest of the cards go back into the Action Deck and it is shuffled.
+. The *first* player can now take their turn!
+
+
+== Units
+Each Unit is represented by a six-sided die. The value shown on top of them represents their current strength.
+
+
+Unit Types::
+    {icon-squad} Squad:::
+        The most basic of Units, a squad of armed soldiers.
+        
+        Stats::::
+        - Strength: 1 to 6
+        - Range: 2
+        
+    {icon-tank} Tank:::
+        Equipped with highly advanced tech, the Tank is a strong combat unit.
+        
+        Stats::::
+        - Strength: 2 to 6
+        - Range: 3
+        
+        Machinery::::
+            If at any moment this Unit's strength reaches 2, it is destroyed. +
+            Permanently remove it from the game and replace it with a {icon-squad} Squad with 1 strength. +
+            Any remaining losses are discarded.
+            
+        Fullmetal::::
+            At the start of an _Attack_, the defender suffers 1 loss. +
+            If this results in their defeat, skip the _counter-attack_ phase.
+        
+        Motorized::::
+            No more than once, after moving during a _March_, it may do 1 free movement.
+
+
+== Player Turns 
+During their turn, a player can take up to 2 actions. The same action may be taken more than once.
+
+Actions::
+    March:::
+        Take up to 3 movements with any of your Units.
+        
+    Attack:::
+        Choose a *Unit* to attack with (the "attacker") and an enemy target *Unit* that's within range (the "defender"). +
+        The player that's attacking does as follows, in order:
+        . The defender takes losses equal to the attackers strength + 1, minus their strength. __(On a tie, the defender takes 1 loss.)__
+        . The defender does a _counter-attack_.
+        . Once an involved *Unit*'s strength reaches 0, they are defeated.
+        . If the attacker was defeated, move the Unit to any spawn point outside the Target Zone, they regain 2 strength.
+        . If the defender was defeated:
+            .. Move the defender to any spawn point outside the Target Zone, they regain 2 strength.
+            .. Choose one of the following:
+                ... Eliminate: Gain 3 VP.
+                ... Capture: Gain 1 VP and 2 {icon-resource} *Resources*.
+        . Otherwise, if the defender is in a Village, Tower or Ballista, move it to any adjacent space.
+
+    Bolster:::
+        If you have no more Units in play, place up to 2 Squads from your Supply on the 2 Villages furthest away from the Target Zone.
+  
+WARNING: If your Supply is empty, you cannot _Bolster_, and *immediately* lose the game.
+
+NOTE: Adjacent spaces are orthogonal: Up, down, left and right. +
+      Diagonal spaces are non-adjacent.
+
+Action Cards::
+    At the start of their turn, a player may play a single *Action Card* from their hand, this does not count as an action. +
+    The player can also ignore the card's effect to gain 1 {icon-resource} *Resource* until the end of their turn. +
+    Once it's been played, the card goes back to the *Action Card* deck, and it is shuffled. +
+
+    Desperate Measures:::
+        One of your Units suffers 2 losses. +
+        Gain 2 {icon-resource} *Resources*.
+
+    Forward!:::
+        Do a _March_ action, but you cannot move the same Unit more than once. +
+        __({icon-tank} *Tanks* do not get any free movement).__
+
+    Sabotage:::
+        Pay up to 2 {icon-resource} *Resources*. +
+        Move a single enemy Unit once per {icon-resource} *Resource* spent.
+
+    Exhaustion:::
+        During the opponent's next turn, they take -1 movement on their _March_ action.
+
+    Fuel Shortage:::
+        Pay 1 {icon-resource} *Resource*. +
+        During their next turn, the opponent cannot move any {icon-tank} *Tanks* with their _March_ action.
+
+    Bullseye:::
+        On your next _Attack_ action during this turn, the defender takes +1 loss.
+
+    Supply and Demand:::
+        During your opponent's next turn, _Upgrading_ costs +1 {icon-resource} *Resource*.
+
+    Faster Tech:::
+        The {icon-marker} *Operation Marker* advances one space.
+        
+    Navigation Expert:::
+        Pay 1 {icon-resource} *Resource*. +
+        During your next _March_ action this turn, ignore extra movement costs.
+    
+    Scare Tactics:::
+        Pay 1 {icon-resource} *Resource*. +
+        During the opponent's next turn, calculate losses as if your attacked Units have +1 strength. +
+        _(A Unit can have no more than 6 strength.)_
+
+== The Battlefield
+
+Terrain Types::
+    {icon-ground-big} Ground:::
+        The default terrain type. +
+        Has no special effects.
+        
+    {icon-water-big} Water:::
+        Costs an additional movement to leave. +
+        While standing in Water, a Unit cannot _counter-attack_ and has -1 strength when defending. +
+        {icon-tank} *Tanks* cannot move into Water.
+        
+    {icon-bridge-big} Bridge:::
+        To enter a Bridge costs an additional movement for {icon-tank} *Tanks*. +
+        _(Their free movement can be used for that.)_
+    
+    {icon-forest-big} Forest:::
+        While standing in a Forest, a Unit cannot suffer a _counter-attack_ and has +1 strength when defending. +
+        {icon-tank} *Tanks* cannot move into a Forest.
+        
+    {icon-hill-big} Hill:::
+        Costs an additional movement to enter. +
+        While standing a Hill, a Unit has +2 range (unless it is a {icon-tank} *Tank*) and +1 strength when attacking.
+    
+    {icon-village-big} Village:::
+        At the end of your turn, a Unit that's standing in a Village may take one of the following actions:
+        
+        Rest::::
+            The Unit regains 2 strength, up to a maximum of 4.
+        
+        Hire::::
+            Pay up to 2 {icon-resource} *Resources* to hire mercenaries. +
+            The Unit gains +1 strength per {icon-resource} *Resource* spent, up to a maximum of 6.
+            
+        Prep::::
+            Draw an Action Card, then discard your hand down to 2.
+    
+    {icon-tower-big} Tower:::
+        While standing in a Tower, a Unit has +1 range (unless it is a {icon-tank} *Tank*). +
+        At the end of your turn, a Unit that's standing in a Tower may take one of the following actions:
+        
+        Upgrade::::
+            Pay 2 {icon-resource} *Resources* to upgrade any of your {icon-squad} *Squads* into a {icon-tank} *Tank*. +
+            The strength of the {icon-tank} *Tank* is equal to the old {icon-squad} *Squad*'s strength + 2. +
+            The old {icon-squad} *Squad* goes into the player's supply if possible. +
+            _(A Unit that's standing in a Village cannot be upgraded.)_
+        
+        Relocate::::
+            Make up to 2 movements with a single Unit. +
+            _({icon-tank} *Tanks* don't get a free movement.)_
+
+    {icon-ballista-big} Ballista:::
+        At the start of your turn, a Unit that's standing in a Ballista may take the following action:
+        
+        Shoot::::
+            Pay 1 {icon-resource} *Resource* to attack an enemy Unit within 5 spaces of the Ballista. +
+            The enemy Unit takes 3 losses and *cannot* _counter-attack_.
+    
+    {icon-windmill-big} Windmill:::
+        A Unit cannot finish their movement on a Windmill if there are any {icon-resource} *Resources* on it. +
+        At the end of your turn, if there is at least one Unit adjacent to a Windmill, take one {icon-resource} *Resource* from it.
+    
+WARNING: You cannot _Upgrade_ without any {icon-tank} *Tanks* in your supply.
+
+NOTE: To "enter" or "leave" a space, means to go from one terrain type to another. +
+      Moving from one Water tile to another, for example, costs no additional movement.
+      
+NOTE: Terrain actions are always free. +
+      They do not count towards the 2 actions per turn.
+
+////
+1. Village: Whenever a Unit finishes their turn on this tile, they may take one of the following actions:
+
+   1. Rest: The Unit regains 2 Strength.
+      - Squads can only get to a maximum of 4 Strength by resting.
+   2. Hire: Pay up to 2 Resources to hire mercenaries to your Squad, adding +1 to their Strength  per Resource spent (up to a maximum of 6).
+
+2. Tower: The Unit has +1 range, unless it is a Tank.
+
+   - Whenever a Unit finishes their turn on this tile, you may take one of the following actions:
+
+       1. Upgrade: Pay 2 Resource to upgrade any Squad into a Tank, it’s Strength is equal to the Squad’s Strength + 1.
+
+          - Units in a Village or Forest cannot be upgraded.
+          - The Squad that was upgraded is immediately added to the player’s Supply.
+
+       2. Relocate: Do 1 movement with a single Unit. You may pay 1 Resource to do up to 2 more movements with the same Unit.
+
+       3. Recruit: Pay 1 Resource to play a Unit from your Supply to the closest Village. The Unit has 2 Strength and cannot _Rest_ until the end of the next turn.
+
+          - A player can control no more than 4 Units at any time.
+
+          - If the closest Village(s) is(are) already occupied, the Bolster action may not be taken.
+
+3. Ballista: Whenever a Unit ends their turn on this tile, they may take the following action once:
+
+   1. Shoot: Pay 1 Resource, the Unit attacks using the Ballista. The Defender takes 2 losses and **cannot** _counter-attack_.
+      - Range: 5.
+
+4. Windmill: Whenever a Unit finishes their turn on a tile adjacent to this one, if there is a Resource token in this tile, take one.
+
+   - A Unit may never finish their movement on a Windmill tile.
+////
