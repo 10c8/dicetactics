@@ -241,4 +241,4 @@ NOTE: Terrain actions are always free. +
 4. Windmill: Whenever a Unit finishes their turn on a tile adjacent to this one, if there is a Resource token in this tile, take one.
 
    - A Unit may never finish their movement on a Windmill tile.
-////
+////include::index.html[]
