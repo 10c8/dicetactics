@@ -1,16 +1,10 @@
 = Dice Tactics
 William F. de Araújo <williampigmeu@gmail.com>
 v0.3, 02-16-2020
-
+:toc: left
 :stylesheet: medium.css
 :icons: font
 :stylesdir: css
-
-++++
-<script src="https://kit.fontawesome.com/04675bbc54.js" crossorigin="anonymous"></script>
-++++
-
-:toc: left
 
 :icon-resource: image:icons/resource.png[Resource, title="Resource", width=25]
 :icon-blocked: image:icons/blocked.png[Blocked, title="Blocked", width=25]
@@ -41,6 +35,10 @@ v0.3, 02-16-2020
 :icon-tower-big: image:icons/tower.png[Tower, title="Tower", width=42]
 :icon-ballista-big: image:icons/ballista.png[Ballista, title="Ballista", width=42]
 :icon-windmill-big: image:icons/windmill.png[Windmill, title="Windmill", width=42]
+
+++++
+<script src="https://kit.fontawesome.com/04675bbc54.js" crossorigin="anonymous"></script>
+++++
 
 
 == Setting Up the Battlefield
