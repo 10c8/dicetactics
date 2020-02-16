@@ -50,6 +50,7 @@ Before you can start fighting for control, you need to prepare the game board:
 . Place the {icon-marker} *Operation Marker* on the Target Zone's {icon-flag} *Flag*.
 . Add 2 {icon-tank} *Tanks* to each Player's Supply.
 . Give each player 4 {icon-squad} *Squads* and 3 {icon-resource} *Resources*.
+. Flip a coin to determine the *first* player.
 . Starting with the *second* player, each player chooses a side, then places all of their {icon-squad} *Squads* on that side's spawn points.
 . Deal 4 Action Cards to each player. Each player keeps one and hands the rest to the other. Repeat until each player has 2 Action Cards on their hand. The rest of the cards go back into the Action Deck and it is shuffled.
 . The *first* player can now take their turn!
