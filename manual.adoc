@@ -89,7 +89,7 @@ Unit Types::
 == Player Turns 
 During their turn, a player can take up to 2 actions. The same action may be taken more than once.
 
-Actions::
+Player Actions::
     March:::
         Take up to 3 movements with any of your Units.
         
@@ -99,12 +99,12 @@ Actions::
         . The defender takes losses equal to the attackers strength + 1, minus their strength. __(On a tie, the defender takes 1 loss.)__
         . The defender does a _counter-attack_.
         . Once an involved *Unit*'s strength reaches 0, they are defeated.
-        . If the attacker was defeated, move the Unit to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they regain 2 strength.
+        . If the attacker was defeated, the opponent gains 1 VP. Move the Unit to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they regain 2 strength.
         . If the defender was defeated:
             .. Move the defender to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they regain 2 strength.
             .. Choose one of the following:
-                ... Eliminate: Gain 3 VP.
-                ... Capture: Gain 1 VP and 2 {icon-resource} *Resources*.
+                ... Eliminate: Gain 2 VP.
+                ... Research: Gain 1 VP and 1 {icon-resource} *Resource*.
         . Otherwise, if the defender is in a Village, Tower or Ballista, move it to any adjacent space.
 
 NOTE: Adjacent spaces are orthogonal: Up, down, left and right. +
