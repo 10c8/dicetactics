@@ -11,6 +11,7 @@ v0.3, 02-16-2020
 :icon-tank: image:icons/tank.png[Tank, title="Tank", width=23]
 :icon-squad: image:icons/squad.png[Squad, title="Squad", width=23]
 
+:icon-spawn: image:icons/spawn.png[Spawn Point, title="Spawn Point", width=23]
 :icon-ground: image:icons/ground.png[Ground, title="Ground", width=23]
 :icon-water: image:icons/water.png[Water, title="Water", width=23]
 :icon-bridge: image:icons/bridge.png[Bridge, title="Bridge", width=23]
@@ -22,6 +23,7 @@ v0.3, 02-16-2020
 :icon-ballista: image:icons/ballista.png[Ballista, title="Ballista", width=23]
 :icon-windmill: image:icons/windmill.png[Windmill, title="Windmill", width=23]
 
+:icon-spawn-big: image:icons/spawn.png[Spawn Point, title="Spawn Point", width=42]
 :icon-ground-big: image:icons/ground.png[Ground, title="Ground", width=42]
 :icon-water-big: image:icons/water.png[Water, title="Water", width=42]
 :icon-blocked-big: image:icons/blocked.png[Blocked, title="Blocked", width=42]
@@ -47,10 +49,11 @@ Before you can start fighting for control, you need to prepare the game board:
 . Add 2 {icon-tank} *Tanks* to each Player's Supply.
 . Give each player 4 {icon-squad} *Squads* and 3 {icon-resource} *Resources*.
 . Flip a coin to determine the *first* player.
-. Starting with the *second* player, each player chooses a side, then places all of their {icon-squad} *Squads* on that side's spawn points.
+. Starting with the *second* player, each player chooses a side, then places all of their {icon-squad} *Squads* on that side's {icon-spawn} *Spawn Points*.
 . Deal 4 Action Cards to each player. Each player keeps one and hands the rest to the other. Repeat until each player has picked 2 cards. Those form their hands. The rest of the cards go back into the Action Deck and it is shuffled.
 . The *first* player can now take their turn!
 
+WARNING: At the start of the game, only the bottom {icon-spawn} *Spawn Points* are available.
 
 == Units
 Each Unit is represented by a six-sided die. The value shown on top of them represents their current strength.
@@ -96,9 +99,9 @@ Actions::
         . The defender takes losses equal to the attackers strength + 1, minus their strength. __(On a tie, the defender takes 1 loss.)__
         . The defender does a _counter-attack_.
         . Once an involved *Unit*'s strength reaches 0, they are defeated.
-        . If the attacker was defeated, move the Unit to any spawn point outside the Target Zone, they regain 2 strength.
+        . If the attacker was defeated, move the Unit to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they regain 2 strength.
         . If the defender was defeated:
-            .. Move the defender to any spawn point outside the Target Zone, they regain 2 strength.
+            .. Move the defender to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they regain 2 strength.
             .. Choose one of the following:
                 ... Eliminate: Gain 3 VP.
                 ... Capture: Gain 1 VP and 2 {icon-resource} *Resources*.
@@ -164,6 +167,9 @@ Terrain Types::
         The default terrain type. +
         Has no special effects.
         
+    {icon-spawn-big} Spawn Point:::
+        Has no special effects.
+    
     {icon-water-big} Water:::
         Costs an additional movement to leave. +
         While standing in Water, a Unit cannot _counter-attack_ and has -1 strength when defending. +
