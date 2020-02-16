@@ -1,24 +1,42 @@
 = Dice Tactics
 William F. de Araújo <williampigmeu@gmail.com>
-v0.1, 02-15-2020
+v0.3, 02-16-2020
 
 :stylesheet: medium.css
 :icons: font
 :stylesdir: css
 
+++++
+<script src="https://kit.fontawesome.com/04675bbc54.js" crossorigin="anonymous"></script>
+++++
+
 :toc: left
 
 :icon-resource: image:icons/resource.png[Resource, title="Resource", width=25]
+:icon-blocked: image:icons/blocked.png[Blocked, title="Blocked", width=25]
 :icon-target: image:icons/target.png[Target, title="Target", width=23]
 :icon-marker: image:icons/operation.png[Operation Marker, title="Operation Marker", width=24]
 :icon-tank: image:icons/tank.png[Tank, title="Tank", width=23]
 :icon-squad: image:icons/squad.png[Squad, title="Squad", width=23]
 
+:icon-ground: image:icons/ground.png[Ground, title="Ground", width=23]
+:icon-water: image:icons/water.png[Water, title="Water", width=23]
+:icon-bridge: image:icons/bridge.png[Bridge, title="Bridge", width=23]
+:icon-forest: image:icons/forest.png[Forest, title="Forest", width=23]
+:icon-hill: image:icons/hill.png[Hill, title="Hill", width=23]
+:icon-flag: image:icons/flag.png[Flag, title="Flag", width=23]
+:icon-village: image:icons/village.jpg[Village, title="Village", width=23]
+:icon-tower: image:icons/tower.png[Tower, title="Tower", width=23]
+:icon-ballista: image:icons/ballista.png[Ballista, title="Ballista", width=23]
+:icon-windmill: image:icons/windmill.png[Windmill, title="Windmill", width=23]
+
 :icon-ground-big: image:icons/ground.png[Ground, title="Ground", width=42]
 :icon-water-big: image:icons/water.png[Water, title="Water", width=42]
+:icon-blocked-big: image:icons/blocked.png[Blocked, title="Blocked", width=42]
 :icon-bridge-big: image:icons/bridge.png[Bridge, title="Bridge", width=42]
 :icon-forest-big: image:icons/forest.png[Forest, title="Forest", width=42]
 :icon-hill-big: image:icons/hill.png[Hill, title="Hill", width=42]
+:icon-flag-big: image:icons/flag.png[Flag, title="Flag", width=42]
 :icon-village-big: image:icons/village.jpg[Village, title="Village", width=42]
 :icon-tower-big: image:icons/tower.png[Tower, title="Tower", width=42]
 :icon-ballista-big: image:icons/ballista.png[Ballista, title="Ballista", width=42]
@@ -28,8 +46,9 @@ v0.1, 02-15-2020
 == Setting Up the Battlefield
 Before you can start fighting for control, you need to prepare the game board:
 
-. Set the {icon-target} *Target* die to 2.
-. Place the {icon-marker} *Operation Marker* on the first space of the Operation Track.-. Add 2 {icon-tank} *Tanks* to each Player's Supply.
+. Set the {icon-target} *Target* to 2.
+. Place the {icon-marker} *Operation Marker* on the Target Zone's {icon-flag} *Flag*.
+. Add 2 {icon-tank} *Tanks* to each Player's Supply.
 . Give each player 4 {icon-squad} *Squads* and 3 {icon-resource} *Resources*.
 . Starting with the *second* player, each player chooses a side, then places all of their {icon-squad} *Squads* on that side's spawn points.
 . Deal 4 Action Cards to each player. Each player keeps one and hands the rest to the other. Repeat until each player has 2 Action Cards on their hand. The rest of the cards go back into the Action Deck and it is shuffled.
@@ -61,8 +80,7 @@ Unit Types::
             Any remaining losses are discarded.
             
         Fullmetal::::
-            At the start of an _Attack_, the defender suffers 1 loss. +
-            If this results in their defeat, skip the _counter-attack_ phase.
+            If the defender is defeated, skip the _counter-attack_ phase.
         
         Motorized::::
             No more than once, after moving during a _March_, it may do 1 free movement.
@@ -89,11 +107,6 @@ Actions::
                 ... Capture: Gain 1 VP and 2 {icon-resource} *Resources*.
         . Otherwise, if the defender is in a Village, Tower or Ballista, move it to any adjacent space.
 
-    Bolster:::
-        If you have no more Units in play, place up to 2 Squads from your Supply on the 2 Villages furthest away from the Target Zone.
-  
-WARNING: If your Supply is empty, you cannot _Bolster_, and *immediately* lose the game.
-
 NOTE: Adjacent spaces are orthogonal: Up, down, left and right. +
       Diagonal spaces are non-adjacent.
 
@@ -102,17 +115,23 @@ Action Cards::
     The player can also ignore the card's effect to gain 1 {icon-resource} *Resource* until the end of their turn. +
     Once it's been played, the card goes back to the *Action Card* deck, and it is shuffled. +
 
-    Desperate Measures:::
-        One of your Units suffers 2 losses. +
-        Gain 2 {icon-resource} *Resources*.
+    Emergency Upgrade:::
+        Pay 1 {icon-resource} *Resource*. +
+        _Upgrade_ one of your Units into a 4 strength {icon-tank} *Tank*. +
+        __(You can do this card even if you have no {icon-tank} *Tanks* on your supply.)__
 
     Forward!:::
         Do a _March_ action, but you cannot move the same Unit more than once. +
         __({icon-tank} *Tanks* do not get any free movement).__
 
     Sabotage:::
-        Pay up to 2 {icon-resource} *Resources*. +
-        Move a single enemy Unit once per {icon-resource} *Resource* spent.
+        Pay 1 {icon-resource} *Resource*. +
+        Move a single movement with an enemy Unit. +
+        {empty} +
+        _- OR -_ +
+        {empty} +
+        Pay 2 {icon-resource} *Resources*. +
+        Make up to 3 movements with a single enemy Unit.
 
     Exhaustion:::
         During the opponent's next turn, they take -1 movement on their _March_ action.
@@ -127,19 +146,21 @@ Action Cards::
     Supply and Demand:::
         During your opponent's next turn, _Upgrading_ costs +1 {icon-resource} *Resource*.
 
-    Faster Tech:::
-        The {icon-marker} *Operation Marker* advances one space.
+    Bribe:::
+        Pay 1 {icon-resource} *Resource*. +
+        The {icon-marker} *Contest Marker* advances or goes back one space.
         
     Navigation Expert:::
-        Pay 1 {icon-resource} *Resource*. +
         During your next _March_ action this turn, ignore extra movement costs.
     
-    Scare Tactics:::
+    Take Cover!:::
         Pay 1 {icon-resource} *Resource*. +
-        During the opponent's next turn, calculate losses as if your attacked Units have +1 strength. +
-        _(A Unit can have no more than 6 strength.)_
+        During the opponent's next turn, defending Units have +1 strength. +
+        __(A Unit can never have more than 6 strength.)__
+
 
 == The Battlefield
+Units move through the Battlefield to fight, gain resources and contest flags.
 
 Terrain Types::
     {icon-ground-big} Ground:::
@@ -161,8 +182,14 @@ Terrain Types::
         
     {icon-hill-big} Hill:::
         Costs an additional movement to enter. +
-        While standing a Hill, a Unit has +2 range (unless it is a {icon-tank} *Tank*) and +1 strength when attacking.
+        While standing a Hill, a Unit has +2 range (unless it is a {icon-tank} *Tank*) and cannot suffer a _counter-attack_.
     
+    {icon-flag-big} Flag:::
+        Entering a Flag space in the Target Zone starts a *Contest*.
+    
+    {icon-blocked-big} Contested:::
+        No movement can be done on a Contested space.
+        
     {icon-village-big} Village:::
         At the end of your turn, a Unit that's standing in a Village may take one of the following actions:
         
@@ -201,7 +228,7 @@ Terrain Types::
         A Unit cannot finish their movement on a Windmill if there are any {icon-resource} *Resources* on it. +
         At the end of your turn, if there is at least one Unit adjacent to a Windmill, take one {icon-resource} *Resource* from it.
     
-WARNING: You cannot _Upgrade_ without any {icon-tank} *Tanks* in your supply.
+WARNING: You cannot _Upgrade_ if you don't have any {icon-tank} *Tanks* in your supply.
 
 NOTE: To "enter" or "leave" a space, means to go from one terrain type to another. +
       Moving from one Water tile to another, for example, costs no additional movement.
@@ -209,36 +236,36 @@ NOTE: To "enter" or "leave" a space, means to go from one terrain type to anothe
 NOTE: Terrain actions are always free. +
       They do not count towards the 2 actions per turn.
 
-////
-1. Village: Whenever a Unit finishes their turn on this tile, they may take one of the following actions:
 
-   1. Rest: The Unit regains 2 Strength.
-      - Squads can only get to a maximum of 4 Strength by resting.
-   2. Hire: Pay up to 2 Resources to hire mercenaries to your Squad, adding +1 to their Strength  per Resource spent (up to a maximum of 6).
+== Contests
+Whenever a Unit enters a {icon-flag} *Flag* space in the Target Zone, a Contest is started:
 
-2. Tower: The Unit has +1 range, unless it is a Tank.
+. The player who started the Contest gains 1 VP.
+. Take the {icon-marker} *Contest Marker* and place it on the green spot of the Contest Tracker.
+. At the end of every second turn, the {icon-marker} *Contest Marker* advances 1 space on the Contest Tracker.
 
-   - Whenever a Unit finishes their turn on this tile, you may take one of the following actions:
+Once the {icon-marker} *Contest Marker* reaches the red spot of the Contest Tracker, the Contest is finished:
 
-       1. Upgrade: Pay 2 Resource to upgrade any Squad into a Tank, it’s Strength is equal to the Squad’s Strength + 1.
+. The player who controls the most Units inside the Target Zone gains 3 VPs.
+. Place a {icon-blocked} *Contested* cube on the Target Zone's {icon-flag} *Flag*.
+    .. If there's a Unit standing in the {icon-flag} *Flag* space, its owner moves it to an adjacent space.
+. Roll the {icon-target} *Target* die to determine the new Target Zone.
+. Place the {icon-marker} *Contest Marker* on the new Target Zone's {icon-flag} *Flag*.
 
-          - Units in a Village or Forest cannot be upgraded.
-          - The Squad that was upgraded is immediately added to the player’s Supply.
+WARNING: A zone containing a {icon-blocked} *Contested* cube cannot be a Target Zone.
 
-       2. Relocate: Do 1 movement with a single Unit. You may pay 1 Resource to do up to 2 more movements with the same Unit.
+NOTE: A "zone" is a 5x5 area represented by a striped outline around a {icon-flag} *Flag* space.
 
-       3. Recruit: Pay 1 Resource to play a Unit from your Supply to the closest Village. The Unit has 2 Strength and cannot _Rest_ until the end of the next turn.
 
-          - A player can control no more than 4 Units at any time.
+== Ending a Game
+The game ends once:
 
-          - If the closest Village(s) is(are) already occupied, the Bolster action may not be taken.
+. All six {icon-flag} *Flags* have been contested.
+. A player has reached 10 VPs.
 
-3. Ballista: Whenever a Unit ends their turn on this tile, they may take the following action once:
+**The player with the most VPs is the winner!** +
 
-   1. Shoot: Pay 1 Resource, the Unit attacks using the Ballista. The Defender takes 2 losses and **cannot** _counter-attack_.
-      - Range: 5.
+In a tie, consider the following tie breakers, in order:
 
-4. Windmill: Whenever a Unit finishes their turn on a tile adjacent to this one, if there is a Resource token in this tile, take one.
-
-   - A Unit may never finish their movement on a Windmill tile.
-////include::index.html[]
+. Amount of {icon-resource} *Resources*
+. Total Unit strength

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,7 +7,6 @@
 <meta name="generator" content="Asciidoctor 2.0.8.dev">
 <meta name="author" content="William F. de Araújo &lt;williampigmeu@gmail.com&gt;">
 <title>Dice Tactics</title>
-<script src="https://kit.fontawesome.com/04675bbc54.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -442,11 +441,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Dice Tactics</h1>
 <div class="details">
 <span id="author" class="author">William F. de Araújo &lt;williampigmeu@gmail.com&gt;</span><br>
-<span id="revnumber">version 0.1,</span>
-<span id="revdate">02-15-2020</span>
+<span id="revnumber">version 0.3,</span>
+<span id="revdate">02-16-2020</span>
 </div>
 </div>
 <div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<script src="https://kit.fontawesome.com/04675bbc54.js" crossorigin="anonymous"></script>
+</div>
+</div>
 <div class="sect1">
 <h2 id="truesetting-up-the-battlefield"><a class="anchor" href="#truesetting-up-the-battlefield"></a>Setting Up the Battlefield</h2>
 <div class="sectionbody">
@@ -456,10 +460,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Set the <span class="image"><img src="icons/target.png" alt="Target" width="23" title="Target"></span> <strong>Target</strong> die to 2.</p>
+<p>Set the <span class="image"><img src="icons/target.png" alt="Target" width="23" title="Target"></span> <strong>Target</strong> to 2.</p>
 </li>
 <li>
-<p>Place the <span class="image"><img src="icons/operation.png" alt="Operation Marker" width="24" title="Operation Marker"></span> <strong>Operation Marker</strong> on the first space of the Operation Track.-. Add 2 <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> to each Player&#8217;s Supply.</p>
+<p>Place the <span class="image"><img src="icons/operation.png" alt="Operation Marker" width="24" title="Operation Marker"></span> <strong>Operation Marker</strong> on the Target Zone&#8217;s <span class="image"><img src="icons/flag.png" alt="Flag" width="23" title="Flag"></span> <strong>Flag</strong>.</p>
+</li>
+<li>
+<p>Add 2 <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> to each Player&#8217;s Supply.</p>
 </li>
 <li>
 <p>Give each player 4 <span class="image"><img src="icons/squad.png" alt="Squad" width="23" title="Squad"></span> <strong>Squads</strong> and 3 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong>.</p>
@@ -536,8 +543,7 @@ Any remaining losses are discarded.</p>
 </dd>
 <dt class="hdlist1">Fullmetal</dt>
 <dd>
-<p>At the start of an <em>Attack</em>, the defender suffers 1 loss.<br>
-If this results in their defeat, skip the <em>counter-attack</em> phase.</p>
+<p>If the defender is defeated, skip the <em>counter-attack</em> phase.</p>
 </dd>
 <dt class="hdlist1">Motorized</dt>
 <dd>
@@ -616,26 +622,10 @@ The player that&#8217;s attacking does as follows, in order:</p>
 </ol>
 </div>
 </dd>
-<dt class="hdlist1">Bolster</dt>
-<dd>
-<p>If you have no more Units in play, place up to 2 Squads from your Supply on the 2 Villages furthest away from the Target Zone.</p>
-</dd>
 </dl>
 </div>
 </dd>
 </dl>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-If your Supply is empty, you cannot <em>Bolster</em>, and <strong>immediately</strong> lose the game.
-</td>
-</tr>
-</table>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -660,10 +650,6 @@ Once it&#8217;s been played, the card goes back to the <strong>Action Card</stro
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Desperate Measures</dt>
-<dd>
-<p>One of your Units suffers 2 losses.<br>
-Gain 2 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong>.</p>
-</dd>
 <dt class="hdlist1">Forward!</dt>
 <dd>
 <p>Do a <em>March</em> action, but you cannot move the same Unit more than once.<br>
@@ -671,8 +657,13 @@ Gain 2 <span class="image"><img src="icons/resource.png" alt="Resource" width="2
 </dd>
 <dt class="hdlist1">Sabotage</dt>
 <dd>
-<p>Pay up to 2 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong>.<br>
-Move a single enemy Unit once per <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong> spent.</p>
+<p>Pay 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.<br>
+Move a single movement with an enemy Unit.<br>
+<br>
+<em>- OR -</em><br>
+<br>
+Pay 2 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong>.<br>
+Make up to 3 movements with a single enemy Unit.</p>
 </dd>
 <dt class="hdlist1">Exhaustion</dt>
 <dd>
@@ -691,20 +682,20 @@ During their next turn, the opponent cannot move any <span class="image"><img sr
 <dd>
 <p>During your opponent&#8217;s next turn, <em>Upgrading</em> costs +1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.</p>
 </dd>
-<dt class="hdlist1">Faster Tech</dt>
+<dt class="hdlist1">Bribe</dt>
 <dd>
-<p>The <span class="image"><img src="icons/operation.png" alt="Operation Marker" width="24" title="Operation Marker"></span> <strong>Operation Marker</strong> advances one space.</p>
+<p>Pay 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.<br>
+The <span class="image"><img src="icons/operation.png" alt="Operation Marker" width="24" title="Operation Marker"></span> <strong>Contest Marker</strong> advances or goes back one space.</p>
 </dd>
 <dt class="hdlist1">Navigation Expert</dt>
 <dd>
-<p>Pay 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.<br>
-During your next <em>March</em> action this turn, ignore extra movement costs.</p>
+<p>During your next <em>March</em> action this turn, ignore extra movement costs.</p>
 </dd>
-<dt class="hdlist1">Scare Tactics</dt>
+<dt class="hdlist1">Take Cover!</dt>
 <dd>
 <p>Pay 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.<br>
-During the opponent&#8217;s next turn, calculate losses as if your attacked Units have +1 strength.<br>
-<em>(A Unit can have no more than 6 strength.)</em></p>
+During the opponent&#8217;s next turn, defending Units have +1 strength.<br>
+<em>(A Unit can never have more than 6 strength.)</em></p>
 </dd>
 </dl>
 </div>
@@ -716,6 +707,9 @@ During the opponent&#8217;s next turn, calculate losses as if your attacked Unit
 <div class="sect1">
 <h2 id="truethe-battlefield"><a class="anchor" href="#truethe-battlefield"></a>The Battlefield</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Units move through the Battlefield to fight, gain resources and contest flags.</p>
+</div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Terrain Types</dt>
@@ -746,7 +740,15 @@ While standing in Water, a Unit cannot <em>counter-attack</em> and has -1 streng
 <dt class="hdlist1"><span class="image"><img src="icons/hill.png" alt="Hill" width="42" title="Hill"></span> Hill</dt>
 <dd>
 <p>Costs an additional movement to enter.<br>
-While standing a Hill, a Unit has +2 range (unless it is a <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tank</strong>) and +1 strength when attacking.</p>
+While standing a Hill, a Unit has +2 range (unless it is a <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tank</strong>) and cannot suffer a <em>counter-attack</em>.</p>
+</dd>
+<dt class="hdlist1"><span class="image"><img src="icons/flag.png" alt="Flag" width="42" title="Flag"></span> Flag</dt>
+<dd>
+<p>Entering a Flag space in the Target Zone starts a <strong>Contest</strong>.</p>
+</dd>
+<dt class="hdlist1"><span class="image"><img src="icons/blocked.png" alt="Blocked" width="42" title="Blocked"></span> Contested</dt>
+<dd>
+<p>No movement can be done on a Contested space.</p>
 </dd>
 <dt class="hdlist1"><span class="image"><img src="icons/village.jpg" alt="Village" width="42" title="Village"></span> Village</dt>
 <dd>
@@ -820,7 +822,7 @@ At the end of your turn, if there is at least one Unit adjacent to a Windmill, t
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-You cannot <em>Upgrade</em> without any <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> in your supply.
+You cannot <em>Upgrade</em> if you don&#8217;t have any <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> in your supply.
 </td>
 </tr>
 </table>
@@ -853,11 +855,116 @@ Terrain actions are always free.<br>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="truecontests"><a class="anchor" href="#truecontests"></a>Contests</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whenever a Unit enters a <span class="image"><img src="icons/flag.png" alt="Flag" width="23" title="Flag"></span> <strong>Flag</strong> space in the Target Zone, a Contest is started:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The player who started the Contest gains 1 VP.</p>
+</li>
+<li>
+<p>Take the <span class="image"><img src="icons/operation.png" alt="Operation Marker" width="24" title="Operation Marker"></span> <strong>Contest Marker</strong> and place it on the green spot of the Contest Tracker.</p>
+</li>
+<li>
+<p>At the end of every second turn, the <span class="image"><img src="icons/operation.png" alt="Operation Marker" width="24" title="Operation Marker"></span> <strong>Contest Marker</strong> advances 1 space on the Contest Tracker.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Once the <span class="image"><img src="icons/operation.png" alt="Operation Marker" width="24" title="Operation Marker"></span> <strong>Contest Marker</strong> reaches the red spot of the Contest Tracker, the Contest is finished:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The player who controls the most Units inside the Target Zone gains 3 VPs.</p>
+</li>
+<li>
+<p>Place a <span class="image"><img src="icons/blocked.png" alt="Blocked" width="25" title="Blocked"></span> <strong>Contested</strong> cube on the Target Zone&#8217;s <span class="image"><img src="icons/flag.png" alt="Flag" width="23" title="Flag"></span> <strong>Flag</strong>.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If there&#8217;s a Unit standing in the <span class="image"><img src="icons/flag.png" alt="Flag" width="23" title="Flag"></span> <strong>Flag</strong> space, its owner moves it to an adjacent space.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Roll the <span class="image"><img src="icons/target.png" alt="Target" width="23" title="Target"></span> <strong>Target</strong> die to determine the new Target Zone.</p>
+</li>
+<li>
+<p>Place the <span class="image"><img src="icons/operation.png" alt="Operation Marker" width="24" title="Operation Marker"></span> <strong>Contest Marker</strong> on the new Target Zone&#8217;s <span class="image"><img src="icons/flag.png" alt="Flag" width="23" title="Flag"></span> <strong>Flag</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+A zone containing a <span class="image"><img src="icons/blocked.png" alt="Blocked" width="25" title="Blocked"></span> <strong>Contested</strong> cube cannot be a Target Zone.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A "zone" is a 5x5 area represented by a striped outline around a <span class="image"><img src="icons/flag.png" alt="Flag" width="23" title="Flag"></span> <strong>Flag</strong> space.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="trueending-a-game"><a class="anchor" href="#trueending-a-game"></a>Ending a Game</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The game ends once:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>All six <span class="image"><img src="icons/flag.png" alt="Flag" width="23" title="Flag"></span> <strong>Flags</strong> have been contested.</p>
+</li>
+<li>
+<p>A player has reached 10 VPs.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>The player with the most VPs is the winner!</strong><br></p>
+</div>
+<div class="paragraph">
+<p>In a tie, consider the following tie breakers, in order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Amount of <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong></p>
+</li>
+<li>
+<p>Total Unit strength</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 0.1<br>
-Last updated 2020-02-16 19:31:08 -0300
+Version 0.3<br>
+Last updated 2020-02-16 20:15:04 -0300
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
