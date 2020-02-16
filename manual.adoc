@@ -118,7 +118,7 @@ Action Cards::
     Emergency Upgrade:::
         Pay 1 {icon-resource} *Resource*. +
         _Upgrade_ one of your Units into a 4 strength {icon-tank} *Tank*. +
-        __(You can do this card even if you have no {icon-tank} *Tanks* on your supply.)__
+        __(You can do this even if you have no {icon-tank} *Tanks* on your supply.)__
 
     Forward!:::
         Do a _March_ action, but you cannot move the same Unit more than once. +
