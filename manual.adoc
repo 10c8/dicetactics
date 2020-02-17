@@ -126,7 +126,7 @@ Action Cards::
 
     Sabotage:::
         Pay 1 {icon-resource} *Resource*. +
-        Move a single movement with an enemy Unit. +
+        Make a single movement with an enemy Unit. +
         {empty} +
         _- OR -_ +
         {empty} +
@@ -134,7 +134,7 @@ Action Cards::
         Make up to 3 movements with a single enemy Unit.
 
     Exhaustion:::
-        During the opponent's next turn, they take -1 movement on their _March_ action.
+        During the opponent's next turn, they make -1 movement on their _March_ action(s).
 
     Fuel Shortage:::
         Pay 1 {icon-resource} *Resource*. +
@@ -151,11 +151,11 @@ Action Cards::
         The {icon-marker} *Contest Marker* advances or goes back one space.
         
     Navigation Expert:::
-        During your next _March_ action this turn, ignore extra movement costs.
+        On your _March_ action(s) during this turn, ignore extra movement costs.
     
     Take Cover!:::
         Pay 1 {icon-resource} *Resource*. +
-        During the opponent's next turn, defending Units have +1 strength. +
+        During the opponent's next turn, your defending Units have +1 strength. +
         __(A Unit can never have more than 6 strength.)__
 
 
