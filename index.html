@@ -442,7 +442,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Dice Tactics</h1>
 <div class="details">
 <span id="author" class="author">William F. de Araújo &lt;williampigmeu@gmail.com&gt;</span><br>
-<span id="revnumber">version 0.3,</span>
+<span id="revnumber">version 0.4,</span>
 <span id="revdate">02-16-2020</span>
 </div>
 <div id="toc" class="toc2">
@@ -533,7 +533,7 @@ At the start of the game, only the bottom <span class="image"><img src="icons/sp
 <div class="ulist">
 <ul>
 <li>
-<p>Strength: 1 to 6</p>
+<p>Starting strength: 4</p>
 </li>
 <li>
 <p>Range: 2</p>
@@ -554,7 +554,7 @@ At the start of the game, only the bottom <span class="image"><img src="icons/sp
 <div class="ulist">
 <ul>
 <li>
-<p>Strength: 2 to 6</p>
+<p>Starting strength: 3 to 6</p>
 </li>
 <li>
 <p>Range: 3</p>
@@ -583,6 +583,18 @@ Any remaining losses are discarded.</p>
 </div>
 </dd>
 </dl>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+A Unit can never have more than 6 strength.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -786,8 +798,7 @@ While standing in Water, a Unit cannot <em>counter-attack</em> and has -1 streng
 </dd>
 <dt class="hdlist1"><span class="image"><img src="icons/bridge.png" alt="Bridge" width="42" title="Bridge"></span> Bridge</dt>
 <dd>
-<p>To enter a Bridge costs an additional movement for <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong>.<br>
-<em>(Their free movement can be used for that.)</em></p>
+<p><span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> cannot move into a Bridge.</p>
 </dd>
 <dt class="hdlist1"><span class="image"><img src="icons/forest.png" alt="Forest" width="42" title="Forest"></span> Forest</dt>
 <dd>
@@ -797,7 +808,7 @@ While standing in Water, a Unit cannot <em>counter-attack</em> and has -1 streng
 <dt class="hdlist1"><span class="image"><img src="icons/hill.png" alt="Hill" width="42" title="Hill"></span> Hill</dt>
 <dd>
 <p>Costs an additional movement to enter.<br>
-While standing a Hill, a Unit has +2 range (unless it is a <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tank</strong>) and cannot suffer a <em>counter-attack</em>.</p>
+While standing a Hill, a Unit has +2 range and cannot suffer a <em>counter-attack</em>.</p>
 </dd>
 <dt class="hdlist1"><span class="image"><img src="icons/flag.png" alt="Flag" width="42" title="Flag"></span> Flag</dt>
 <dd>
@@ -823,7 +834,7 @@ The Unit gains +1 strength per <span class="image"><img src="icons/resource.png"
 </dd>
 <dt class="hdlist1">Prep</dt>
 <dd>
-<p>Draw an <strong>Action Card</strong>, then discard your hand down to 2.<br>
+<p>Draw an <strong>Action Card</strong>, then discard your hand down to 2 cards.<br>
 Then, if the <strong>Action Card</strong> deck is empty, take the discard pile and shuffle it to make a new one.</p>
 </dd>
 </dl>
@@ -881,18 +892,6 @@ At the end of your turn, if there is at least one Unit adjacent to a Windmill, t
 </td>
 <td class="content">
 You cannot <em>Upgrade</em> if you don&#8217;t have any <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> in your supply.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-A Unit can never have more than 6 strength.
 </td>
 </tr>
 </table>
@@ -1021,10 +1020,10 @@ A "zone" is a 5x5 area represented by a striped outline around a <span class="im
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Amount of <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong></p>
+<p>Amount of <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong>.</p>
 </li>
 <li>
-<p>Total Unit strength</p>
+<p>Total Unit strength.</p>
 </li>
 </ol>
 </div>
@@ -1033,8 +1032,8 @@ A "zone" is a 5x5 area represented by a striped outline around a <span class="im
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 0.3<br>
-Last updated 2020-02-16 21:41:06 -0300
+Version 0.4<br>
+Last updated 2020-02-17 01:36:28 -0300
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">

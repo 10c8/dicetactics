@@ -1,6 +1,6 @@
 = Dice Tactics
 William F. de Araújo <williampigmeu@gmail.com>
-v0.3, 02-16-2020
+v0.4, 02-16-2020
 :toc: left
 :icons: font
 
@@ -64,26 +64,25 @@ Unit Types::
         The most basic of Units, a squad of armed soldiers.
         
         Stats::::
-        - Strength: 1 to 6
+        - Starting strength: 4
         - Range: 2
         
     {icon-tank} Tank:::
         Equipped with highly advanced tech, the Tank is a strong combat unit.
         
         Stats::::
-        - Strength: 2 to 6
+        - Starting strength: 3 to 6
         - Range: 3
         
         Machinery::::
             If at any moment this Unit's strength reaches 2, it is destroyed. +
             Permanently remove it from the game and replace it with a {icon-squad} Squad with 1 strength. +
             Any remaining losses are discarded.
-            
-        Fullmetal::::
-            If the defender is defeated, skip the _<<counter-attack>>_ phase.
         
         Motorized::::
-            No more than once, after moving during a _March_, it may do 1 free movement.
+            No more than once, after moving during a _March_, this Unit may make 1 free movement.
+
+WARNING: A Unit can never have more than 6 strength.
 
 
 == Player Turns 
@@ -91,7 +90,7 @@ During their turn, a player can take up to 2 actions. The same action may be tak
 
 Player Actions::
     March:::
-        Take up to 3 movements with any of your Units.
+        Make up to 3 movements with any of your Units.
         
     Attack:::
         Choose a *Unit* to attack with (the "attacker") and an enemy target *Unit* that's within range (the "defender"). +
@@ -118,8 +117,8 @@ NOTE: Adjacent spaces are orthogonal: Up, down, left and right. +
 WARNING: You cannot counter a _counter-attack_.
 
 Action Cards::
-    At the start of their turn, a player may play a single *Action Card* from their hand, this does not count as an action. +
-    The player can also ignore the card's effect to gain 1 {icon-resource} *Resource* until the end of their turn. +
+    At the start of their turn, a player can discard an *Action Card* to gain 1 {icon-resource} *Resource*. +
+    At any time during their turn, a player may play a single *Action Card* from their hand, this does not count as an action. +
     Once it's been played, the card goes to the *Action Card* discard pile. +
 
     Emergency Upgrade:::
@@ -129,7 +128,7 @@ Action Cards::
 
     Forward!:::
         Do a _March_ action, but you cannot move the same Unit more than once. +
-        __({icon-tank} *Tanks* do not get any free movement).__
+        __({icon-tank} *Tanks* do not make any free movement).__
 
     Sabotage:::
         Pay 1 {icon-resource} *Resource*. +
@@ -183,8 +182,7 @@ Terrain Types::
         {icon-tank} *Tanks* cannot move into Water.
         
     {icon-bridge-big} Bridge:::
-        To enter a Bridge costs an additional movement for {icon-tank} *Tanks*. +
-        _(Their free movement can be used for that.)_
+        {icon-tank} *Tanks* cannot move into a Bridge.
     
     {icon-forest-big} Forest:::
         While standing in a Forest, a Unit cannot suffer a _counter-attack_ and has +1 strength when defending. +
@@ -192,7 +190,7 @@ Terrain Types::
         
     {icon-hill-big} Hill:::
         Costs an additional movement to enter. +
-        While standing a Hill, a Unit has +2 range (unless it is a {icon-tank} *Tank*) and cannot suffer a _counter-attack_.
+        While standing a Hill, a Unit has +2 range and cannot suffer a _counter-attack_.
     
     {icon-flag-big} Flag:::
         Entering a Flag space in the Target Zone starts a *Contest*.
@@ -203,15 +201,12 @@ Terrain Types::
     {icon-village-big} Village:::
         At the end of your turn, a Unit that's standing in a Village may take one of the following actions:
         
-        Rest::::
-            The Unit regains 2 strength, up to a maximum of 4.
-        
         Hire::::
             Pay up to 2 {icon-resource} *Resources* to hire mercenaries. +
             The Unit gains +1 strength per {icon-resource} *Resource* spent, up to a maximum of 6.
             
         Prep::::
-            Draw an *Action Card*, then discard your hand down to 2. +
+            Draw an *Action Card*, then discard your hand down to 2 cards. +
             Then, if the *Action Card* deck is empty, take the discard pile and shuffle it to make a new one.
     
     {icon-tower-big} Tower:::
@@ -226,10 +221,10 @@ Terrain Types::
         
         Relocate::::
             Make up to 2 movements with a single Unit. +
-            _({icon-tank} *Tanks* don't get a free movement.)_
+            _({icon-tank} *Tanks* do not make a free movement.)_
 
     {icon-ballista-big} Ballista:::
-        At the start of your turn, a Unit that's standing in a Ballista may take the following action:
+        At the end of your turn, a Unit that's standing in a Ballista may take the following action:
         
         Shoot::::
             Pay 1 {icon-resource} *Resource* to attack an enemy Unit within 5 spaces of the Ballista. +
@@ -240,8 +235,6 @@ Terrain Types::
         At the end of your turn, if there is at least one Unit adjacent to a Windmill, take one {icon-resource} *Resource* from it.
     
 WARNING: You cannot _Upgrade_ if you don't have any {icon-tank} *Tanks* in your supply.
-
-WARNING: A Unit can never have more than 6 strength.
 
 NOTE: To "enter" or "leave" a space, means to go from one terrain type to another. +
       Moving from one Water tile to another, for example, costs no additional movement.
@@ -280,5 +273,5 @@ The game ends once:
 
 In a tie, consider the following tie breakers, in order:
 
-. Amount of {icon-resource} *Resources*
-. Total Unit strength
+. Amount of {icon-resource} *Resources*.
+. Total Unit strength.
