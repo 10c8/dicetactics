@@ -50,7 +50,7 @@ Before you can start fighting for control, you need to prepare the game board:
 . Give each player 4 {icon-squad} *Squads* and 3 {icon-resource} *Resources*.
 . Flip a coin to determine the *first* player.
 . Starting with the *second* player, each player chooses a side, then places all of their {icon-squad} *Squads* on that side's {icon-spawn} *Spawn Points*.
-. Deal 4 Action Cards to each player. Each player keeps one and hands the rest to the other. Repeat until each player has picked 2 cards. Those form their hands. The rest of the cards go back into the Action Deck and it is shuffled.
+. Deal 4 *Action Cards* to each player. Each player keeps one and hands the rest to the other. Repeat until each player has picked 2 cards. Those form their hands. The rest of the cards go back into the *Action Card* deck and it is shuffled.
 . The *first* player can now take their turn!
 
 WARNING: At the start of the game, only the bottom {icon-spawn} *Spawn Points* are available.
@@ -113,7 +113,7 @@ NOTE: Adjacent spaces are orthogonal: Up, down, left and right. +
 Action Cards::
     At the start of their turn, a player may play a single *Action Card* from their hand, this does not count as an action. +
     The player can also ignore the card's effect to gain 1 {icon-resource} *Resource* until the end of their turn. +
-    Once it's been played, the card goes back to the *Action Card* deck, and it is shuffled. +
+    Once it's been played, the card goes to the *Action Card* discard pile. +
 
     Emergency Upgrade:::
         Pay 1 {icon-resource} *Resource*. +
@@ -204,7 +204,8 @@ Terrain Types::
             The Unit gains +1 strength per {icon-resource} *Resource* spent, up to a maximum of 6.
             
         Prep::::
-            Draw an Action Card, then discard your hand down to 2.
+            Draw an *Action Card*, then discard your hand down to 2. +
+            Then, if the *Action Card* deck is empty, take the discard pile and shuffle it to make a new one.
     
     {icon-tower-big} Tower:::
         While standing in a Tower, a Unit has +1 range (unless it is a {icon-tank} *Tank*). +
