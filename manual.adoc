@@ -241,6 +241,8 @@ Terrain Types::
     
 WARNING: You cannot _Upgrade_ if you don't have any {icon-tank} *Tanks* in your supply.
 
+WARNING: A Unit can never have more than 6 strength.
+
 NOTE: To "enter" or "leave" a space, means to go from one terrain type to another. +
       Moving from one Water tile to another, for example, costs no additional movement.
       
