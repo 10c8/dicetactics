@@ -570,7 +570,7 @@ Any remaining losses are discarded.</p>
 </dd>
 <dt class="hdlist1">Fullmetal</dt>
 <dd>
-<p>If the defender is defeated, skip the <em>counter-attack</em> phase.</p>
+<p>If the defender is defeated, skip the <em><a href="#counter-attack">Counter Attack</a></em> phase.</p>
 </dd>
 <dt class="hdlist1">Motorized</dt>
 <dd>
@@ -612,7 +612,7 @@ The player that&#8217;s attacking does as follows, in order:</p>
 <p>The defender takes losses equal to the attackers strength + 1, minus their strength. <em>(On a tie, the defender takes 1 loss.)</em></p>
 </li>
 <li>
-<p>The defender does a <em>counter-attack</em>.</p>
+<p>The defender does a <em><a href="#counter-attack">Counter Attack</a></em>.</p>
 </li>
 <li>
 <p>Once an involved <strong>Unit</strong>'s strength reaches 0, they are defeated.</p>
@@ -663,6 +663,27 @@ The player that&#8217;s attacking does as follows, in order:</p>
 <td class="content">
 Adjacent spaces are orthogonal: Up, down, left and right.<br>
       Diagonal spaces are non-adjacent.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a id="counter-attack"></a>Counter Attack</dt>
+<dd>
+<p>When a Unit is attacked, it can do a <em>counter-attack</em>, even if it isn&#8217;t within attack range.<br>
+When this happens, the attacker takes 1 loss.</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+You cannot counter a <em>counter-attack</em>.
 </td>
 </tr>
 </table>
@@ -1001,7 +1022,7 @@ A "zone" is a 5x5 area represented by a striped outline around a <span class="im
 <div id="footer">
 <div id="footer-text">
 Version 0.3<br>
-Last updated 2020-02-16 21:14:36 -0300
+Last updated 2020-02-16 21:37:25 -0300
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">

@@ -80,7 +80,7 @@ Unit Types::
             Any remaining losses are discarded.
             
         Fullmetal::::
-            If the defender is defeated, skip the _counter-attack_ phase.
+            If the defender is defeated, skip the _<<counter-attack>>_ phase.
         
         Motorized::::
             No more than once, after moving during a _March_, it may do 1 free movement.
@@ -96,8 +96,8 @@ Player Actions::
     Attack:::
         Choose a *Unit* to attack with (the "attacker") and an enemy target *Unit* that's within range (the "defender"). +
         The player that's attacking does as follows, in order:
-        . The defender takes losses equal to the attackers strength + 1, minus their strength. __(On a tie, the defender takes 1 loss.)__
-        . The defender does a _counter-attack_.
+        . The defender takes losses equal to the attackers strength + 1, minus their strength. _(On a tie, the defender takes 1 loss.)_
+        . The defender does a _<<counter-attack>>_.
         . Once an involved *Unit*'s strength reaches 0, they are defeated.
         . If the attacker was defeated, the opponent gains 1 VP. Move the Unit to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they regain 2 strength.
         . If the defender was defeated:
@@ -106,9 +106,16 @@ Player Actions::
                 ... Eliminate: Gain 2 VP.
                 ... Research: Gain 1 VP and 1 {icon-resource} *Resource*.
         . Otherwise, if the defender is in a Village, Tower or Ballista, move it to any adjacent space.
+        
 
 NOTE: Adjacent spaces are orthogonal: Up, down, left and right. +
       Diagonal spaces are non-adjacent.
+
+[[counter-attack]]Counter-Attack::
+    When a Unit is attacked, it can do a _counter-attack_, even if it isn't within attack range. +
+    When this happens, the attacker takes 1 loss.
+
+WARNING: You cannot counter a _counter-attack_.
 
 Action Cards::
     At the start of their turn, a player may play a single *Action Card* from their hand, this does not count as an action. +
