@@ -1,6 +1,6 @@
 = Dice Tactics
 William F. de Araújo <williampigmeu@gmail.com>
-v0.4, 02-16-2020
+v0.5, 02-23-2020
 :toc: left
 :icons: font
 
@@ -44,7 +44,7 @@ v0.4, 02-16-2020
 == Setting Up the Battlefield
 Before you can start fighting for control, you need to prepare the game board:
 
-. Set the {icon-target} *Target* to 2.
+. Set the {icon-target} *Target* die to 2, that's the current Target Zone.
 . Place the {icon-marker} *Operation Marker* on the Target Zone's {icon-flag} *Flag*.
 . Add 2 {icon-tank} *Tanks* to each Player's Supply.
 . Give each player 4 {icon-squad} *Squads* and 3 {icon-resource} *Resources*.
@@ -54,6 +54,7 @@ Before you can start fighting for control, you need to prepare the game board:
 . The *first* player can now take their turn!
 
 WARNING: At the start of the game, only the bottom {icon-spawn} *Spawn Points* are available.
+
 
 == Units
 Each Unit is represented by a six-sided die. The value shown on top of them represents their current strength.
@@ -76,13 +77,15 @@ Unit Types::
         
         Machinery::::
             If at any moment this Unit's strength reaches 2, it is destroyed. +
-            Permanently remove it from the game and replace it with a {icon-squad} Squad with 1 strength. +
+            Add it to its owner's supply and replace it with a {icon-squad} *Squad* with 1 strength. +
             Any remaining losses are discarded.
         
         Motorized::::
             No more than once, after moving during a _March_, this Unit may make 1 free movement.
 
 WARNING: A Unit can never have more than 6 strength.
+
+WARNING: As long as a player is controlling more than 2 {icon-tank} *Tanks*, whenever one of those is destroyed, instead of being added to the player's supply, it is permanently removed from the game.
 
 
 == Player Turns 
@@ -95,7 +98,8 @@ Player Actions::
     Attack:::
         Choose a *Unit* to attack with (the "attacker") and an enemy target *Unit* that's within range (the "defender"). +
         The player that's attacking does as follows, in order:
-        . The defender takes losses equal to the attackers strength + 1, minus their strength. _(On a tie, the defender takes 1 loss.)_
+        . The defender takes losses equal to the attackers strength + 1, minus their strength.
+            .. If the attacker's strength is equal to, or less than the defender's, the defender takes 2 losses.
         . The defender does a _<<counter-attack>>_.
         . Once an involved *Unit*'s strength reaches 0, they are defeated.
         . If the attacker was defeated, the opponent gains 1 VP. Move the Unit to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they regain 2 strength.
@@ -104,8 +108,9 @@ Player Actions::
             .. Choose one of the following:
                 ... Eliminate: Gain 2 VP.
                 ... Research: Gain 1 VP and 1 {icon-resource} *Resource*.
-        . Otherwise, if the defender is in a Village, Tower or Ballista, move it to any adjacent space.
-        
+        . Otherwise, if the defender is in a Village, Tower or Ballista, move it to any adjacent space, as long as that does not result in them being closer to the attacker.
+
+WARNING: Units that recently respawned cannot act until the next turn.
 
 NOTE: Adjacent spaces are orthogonal: Up, down, left and right. +
       Diagonal spaces are non-adjacent.
@@ -157,12 +162,13 @@ Action Cards::
         The {icon-marker} *Contest Marker* advances or goes back one space.
         
     Navigation Expert:::
-        On your _March_ action(s) during this turn, ignore extra movement costs.
+        On your _March_ action(s) during this turn, ignore extra movement costs. +
+        _({icon-tank} *Tanks* still can't enter {icon-village} *Villages*, {icon-tower} *Towers* or {icon-water} *Water*.)_
     
     Take Cover!:::
         Pay 1 {icon-resource} *Resource*. +
         During the opponent's next turn, your defending Units have +1 strength. +
-        __(A Unit can never have more than 6 strength.)__
+        _(A Unit can never have more than 6 strength.)_
 
 
 == The Battlefield
@@ -178,28 +184,29 @@ Terrain Types::
     
     {icon-water-big} Water:::
         Costs an additional movement to leave. +
-        While standing in Water, a Unit cannot _counter-attack_ and has -1 strength when defending. +
-        {icon-tank} *Tanks* cannot move into Water.
+        While standing in {icon-water} *Water*, a Unit cannot _counter-attack_ and has -1 strength when defending. +
+        {icon-tank} *Tanks* cannot move into {icon-water} *Water*.
         
     {icon-bridge-big} Bridge:::
-        {icon-tank} *Tanks* cannot move into a Bridge.
+        Costs an additional move to leave. +
+        While standing in a {icon-bridge} *Bridge*, a Unit has -1 range.
     
     {icon-forest-big} Forest:::
-        While standing in a Forest, a Unit cannot suffer a _counter-attack_ and has +1 strength when defending. +
-        {icon-tank} *Tanks* cannot move into a Forest.
+        While standing in a {icon-forest} *Forest*, a Unit cannot suffer a _counter-attack_ and has +1 strength when defending. +
+        {icon-tank} *Tanks* cannot move into a {icon-forest} *Forest*.
         
     {icon-hill-big} Hill:::
         Costs an additional movement to enter. +
-        While standing a Hill, a Unit has +2 range and cannot suffer a _counter-attack_.
+        While standing a {icon-hill} *Hill*, a Unit has +2 range and cannot suffer a _counter-attack_.
     
     {icon-flag-big} Flag:::
-        Entering a Flag space in the Target Zone starts a *Contest*.
+        Entering a {icon-flag} *Flag* space in the Target Zone starts a *Contest*.
     
     {icon-blocked-big} Contested:::
-        No movement can be done on a Contested space.
+        No movement can be done on a {icon-blocked} *Contested* space.
         
     {icon-village-big} Village:::
-        At the end of your turn, a Unit that's standing in a Village may take one of the following actions:
+        At the end of your turn, a Unit that's standing in a {icon-village} *Village* may take one of the following actions:
         
         Hire::::
             Pay up to 2 {icon-resource} *Resources* to hire mercenaries. +
@@ -210,28 +217,29 @@ Terrain Types::
             Then, if the *Action Card* deck is empty, take the discard pile and shuffle it to make a new one.
     
     {icon-tower-big} Tower:::
-        While standing in a Tower, a Unit has +1 range (unless it is a {icon-tank} *Tank*). +
-        At the end of your turn, a Unit that's standing in a Tower may take one of the following actions:
+        While standing in a {icon-tower} *Tower*, a Unit has +2 range. +
+        {icon-tank} *Tanks* cannot move into a {icon-tower} *Tower*. +
+        At the end of your turn, a Unit that's standing in a {icon-tower} *Tower* may take one of the following actions:
         
         Upgrade::::
             Pay 2 {icon-resource} *Resources* to upgrade any of your {icon-squad} *Squads* into a {icon-tank} *Tank*. +
             The strength of the {icon-tank} *Tank* is equal to the old {icon-squad} *Squad*'s strength + 2. +
             The old {icon-squad} *Squad* goes into the player's supply if possible. +
-            _(A Unit that's standing in a Village cannot be upgraded.)_
+            _(A Unit that's standing in a {icon-village} *Village* or a {icon-tower} *Tower* cannot be upgraded.)_
         
         Relocate::::
             Make up to 2 movements with a single Unit. +
             _({icon-tank} *Tanks* do not make a free movement.)_
 
     {icon-ballista-big} Ballista:::
-        At the end of your turn, a Unit that's standing in a Ballista may take the following action:
+        At the end of your turn, a Unit that's standing in a {icon-ballista} *Ballista* may take the following action:
         
         Shoot::::
-            Pay 1 {icon-resource} *Resource* to attack an enemy Unit within 5 spaces of the Ballista. +
+            Pay 1 {icon-resource} *Resource* to attack an enemy Unit within 5 spaces of the {icon-ballista} *Ballista*. +
             The enemy Unit takes 3 losses and *cannot* _counter-attack_.
     
     {icon-windmill-big} Windmill:::
-        A Unit cannot finish their movement on a Windmill if there are any {icon-resource} *Resources* on it. +
+        A Unit cannot enter a Windmill space if there's at least 1 {icon-resource} *Resource* on it. +
         At the end of your turn, if there is at least one Unit adjacent to a Windmill, take one {icon-resource} *Resource* from it.
     
 WARNING: You cannot _Upgrade_ if you don't have any {icon-tank} *Tanks* in your supply.
@@ -248,14 +256,15 @@ Whenever a Unit enters a {icon-flag} *Flag* space in the Target Zone, a Contest 
 
 . The player who started the Contest gains 1 VP.
 . Take the {icon-marker} *Contest Marker* and place it on the green spot of the Contest Tracker.
-. At the end of every second turn, the {icon-marker} *Contest Marker* advances 1 space on the Contest Tracker.
+. At the end of *every second turn*, the {icon-marker} *Contest Marker* advances 1 space on the Contest Tracker.
 
 Once the {icon-marker} *Contest Marker* reaches the red spot of the Contest Tracker, the Contest is finished:
 
-. The player who controls the most Units inside the Target Zone gains 3 VPs.
+. The player who controls the most Units inside the Target Zone gains 2 VPs.
 . Place a {icon-blocked} *Contested* cube on the Target Zone's {icon-flag} *Flag*.
     .. If there's a Unit standing in the {icon-flag} *Flag* space, its owner moves it to an adjacent space.
-. Roll the {icon-target} *Target* die to determine the new Target Zone.
+. Zone 5 is the new Target Zone.
+    .. If that zone was already {icon-blocked} *Contested*, roll the {icon-target} *Target* die to determine the new Target Zone.
 . Place the {icon-marker} *Contest Marker* on the new Target Zone's {icon-flag} *Flag*.
 
 WARNING: A zone containing a {icon-blocked} *Contested* cube cannot be a Target Zone.
@@ -263,7 +272,7 @@ WARNING: A zone containing a {icon-blocked} *Contested* cube cannot be a Target 
 NOTE: A "zone" is a 5x5 area represented by a striped outline around a {icon-flag} *Flag* space.
 
 
-== Ending a Game
+== Ending the Game
 The game ends once:
 
 . All six {icon-flag} *Flags* have been contested.
@@ -275,3 +284,15 @@ In a tie, consider the following tie breakers, in order:
 
 . Amount of {icon-resource} *Resources*.
 . Total Unit strength.
+
+
+== Things to Remember
+Rules Priority::
+    If a rule is different between this rulebook and somewhere else, prioritize what's stated here.
+
+Movement::
+    Every movement is *orthogonal* (up, down, left and right). Diagonal movements are *invalid*.
+
+Combat::
+    The attacker almost always has the advantage, as even when weaker, they always cause at least 2 losses. +
+    This changes depending on the terrain spaces where combat is happening.
