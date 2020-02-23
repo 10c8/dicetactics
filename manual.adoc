@@ -42,10 +42,13 @@ v0.5, 02-23-2020
 
 
 == Setting Up the Battlefield
+[.right]
+image::images/tracker.png[Tracker, title="Target die and Contest Track", caption="", width=300, role="rel th right"]
+
 Before you can start fighting for control, you need to prepare the game board:
 
 . Set the {icon-target} *Target* die to 2, that's the current Target Zone.
-. Place the {icon-marker} *Operation Marker* on the Target Zone's {icon-flag} *Flag*.
+. Place the {icon-marker} *Contest Marker* on the Target Zone's {icon-flag} *Flag*.
 . Add 2 {icon-tank} *Tanks* to each Player's Supply.
 . Give each player 4 {icon-squad} *Squads* and 3 {icon-resource} *Resources*.
 . Flip a coin to determine the *first* player.
@@ -60,9 +63,9 @@ WARNING: At the start of the game, only the bottom {icon-spawn} *Spawn Points* a
 Each Unit is represented by a six-sided die. The value shown on top of them represents their current strength.
 
 [.right]
-image::images/squad-img.png[Squads, title="Squads", width=200, caption="Figure 2. ", role="rel th right"]
+image::images/squad-img.png[Squads, title="Squads", width=200, caption="", role="rel th right"]
 [.right]
-image::images/tank-img.png[Tanks, title="Tanks", width=242, caption="Figure 1. ", role="rel th right"]
+image::images/tank-img.png[Tanks, title="Tanks", width=242, caption="", role="rel th right"]
 
 
 Unit Types::
@@ -89,7 +92,7 @@ Unit Types::
             No more than once, after moving during a _March_, this Unit may make 1 free movement.
 
 [.right]
-image::images/supply.png[Supply, title="Supply", width=200, role="rel th right"]
+image::images/supply.png[Supply, title="Supply", width=200, caption="", role="rel th right"]
 
 Supply::
     Each player has a supply, it stores the {icon-tank} *Tanks* available for _Upgrades_. +
@@ -265,11 +268,14 @@ NOTE: Terrain actions are always free. +
 
 
 == Contests
+[.right]
+image::images/tracker.png[Tracker, title="Target die and Contest Track", caption="", width=300, role="rel th right"]
+
 Whenever a Unit enters a {icon-flag} *Flag* space in the Target Zone, a Contest is started:
 
 . The player who started the Contest gains 1 VP.
-. Take the {icon-marker} *Contest Marker* and place it on the green spot of the Contest Tracker.
-. At the end of *every second turn*, the {icon-marker} *Contest Marker* advances 1 space on the Contest Tracker.
+. Take the {icon-marker} *Contest Marker* and place it on the green spot of the Contest Track.
+. At the end of *every second turn*, the {icon-marker} *Contest Marker* advances 1 space on the Contest Track.
 
 Once the {icon-marker} *Contest Marker* reaches the red spot of the Contest Tracker, the Contest is finished:
 
