@@ -63,10 +63,9 @@ WARNING: At the start of the game, only the bottom {icon-spawn} *Spawn Points* a
 Each Unit is represented by a six-sided die. The value shown on top of them represents their current strength.
 
 [.right]
-image::images/squad-img.png[Squads, title="Squads", width=200, caption="", role="rel th right"]
-[.right]
 image::images/tank-img.png[Tanks, title="Tanks", width=242, caption="", role="rel th right"]
-
+[.right]
+image::images/squad-img.png[Squads, title="Squads", width=200, caption="", role="rel th right"]
 
 Unit Types::
     {icon-squad} Squad:::
@@ -294,7 +293,7 @@ NOTE: A "zone" is a 5x5 area represented by a striped outline around a {icon-fla
 == Ending the Game
 The game ends once:
 
-. All six {icon-flag} *Flags* have been contested.
+. All six {icon-flag} *Flags* have been {icon-blocked} *Contested*.
 . A player has reached 10 VPs.
 
 **The player with the most VPs is the winner!** +
