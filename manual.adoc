@@ -127,6 +127,8 @@ Player Actions::
 
 WARNING: Units that recently respawned cannot act until the next turn.
 
+WARNING: A Unit cannot _Attack_ the same Unit more than once per turn.
+
 NOTE: Adjacent spaces are orthogonal: Up, down, left and right. +
       Diagonal spaces are non-adjacent.
 
