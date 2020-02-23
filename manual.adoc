@@ -93,7 +93,8 @@ During their turn, a player can take up to 2 actions. The same action may be tak
 
 Player Actions::
     March:::
-        Make up to 3 movements with any of your Units.
+        Make up to 3 movements with any of your Units. +
+        The movements may be divided between Units, but never between actions.
         
     Attack:::
         Choose a *Unit* to attack with (the "attacker") and an enemy target *Unit* that's within range (the "defender"). +
