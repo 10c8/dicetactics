@@ -134,7 +134,7 @@ Action Cards::
 
     Forward!:::
         Do a _March_ action, but you cannot move the same Unit more than once. +
-        __({icon-tank} *Tanks* do not make any free movement).__
+        __({icon-tank} *Tanks* do not get to make any free movement).__
 
     Sabotage:::
         Pay 1 {icon-resource} *Resource*. +
@@ -230,7 +230,7 @@ Terrain Types::
         
         Relocate::::
             Make up to 2 movements with a single Unit. +
-            _({icon-tank} *Tanks* do not make a free movement.)_
+            _({icon-tank} *Tanks* do not get to make a free movement.)_
 
     {icon-ballista-big} Ballista:::
         At the end of your turn, a Unit that's standing in a {icon-ballista} *Ballista* may take the following action:
