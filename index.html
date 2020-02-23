@@ -518,6 +518,18 @@ At the start of the game, only the bottom <span class="image"><img src="icons/sp
 <div class="paragraph">
 <p>Each Unit is represented by a six-sided die. The value shown on top of them represents their current strength.</p>
 </div>
+<div class="imageblock rel th right">
+<div class="content">
+<img src="images/squad-img.png" alt="Squads" width="200">
+</div>
+<div class="title">Figure 2. Squads</div>
+</div>
+<div class="imageblock rel th right">
+<div class="content">
+<img src="images/tank-img.png" alt="Tanks" width="242">
+</div>
+<div class="title">Figure 1. Tanks</div>
+</div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Unit Types</dt>
@@ -581,6 +593,21 @@ Any remaining losses are discarded.</p>
 </dd>
 </dl>
 </div>
+<div class="imageblock rel th right">
+<div class="content">
+<img src="images/supply.png" alt="Supply" width="200">
+</div>
+<div class="title">Figure 1. Supply</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Supply</dt>
+<dd>
+<p>Each player has a supply, it stores the <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> available for <em>Upgrades</em>.<br>
+Up to 2 <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> can be stored in the supply at any time.</p>
+</dd>
+</dl>
+</div>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -626,7 +653,7 @@ The movements may be divided between Units, but never between actions.</p>
 </dd>
 <dt class="hdlist1">Attack</dt>
 <dd>
-<p>Choose a <strong>Unit</strong> to attack with (the "attacker") and an enemy target <strong>Unit</strong> that&#8217;s within range (the "defender").<br>
+<p>Choose a Unit to attack with (the "attacker") and an enemy target Unit that&#8217;s within range (the "defender").<br>
 The player that&#8217;s attacking does as follows, in order:</p>
 <div class="olist arabic">
 <ol class="arabic">
@@ -644,30 +671,30 @@ The player that&#8217;s attacking does as follows, in order:</p>
 <p>The defender does a <em><a href="#counter-attack">Counter-Attack</a></em>.</p>
 </li>
 <li>
-<p>Once an involved <strong>Unit</strong>'s strength reaches 0, they are defeated.</p>
+<p>Once an involved Unit&#8217;s strength reaches 0, they are defeated.</p>
 </li>
 <li>
-<p>If the attacker was defeated, the opponent gains 1 VP. Move the Unit to any <span class="image"><img src="icons/spawn.png" alt="Spawn Point" width="23" title="Spawn Point"></span> <strong>Spawn Point</strong> that&#8217;s not adjacent to the Target Zone, they regain 2 strength.</p>
+<p>If the attacker was defeated:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The opponent gains 1 VP.</p>
+</li>
+<li>
+<p>Move the attacker to any <span class="image"><img src="icons/spawn.png" alt="Spawn Point" width="23" title="Spawn Point"></span> <strong>Spawn Point</strong> that&#8217;s not adjacent to the Target Zone, they have 2 strength.</p>
+</li>
+</ol>
+</div>
 </li>
 <li>
 <p>If the defender was defeated:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Move the defender to any <span class="image"><img src="icons/spawn.png" alt="Spawn Point" width="23" title="Spawn Point"></span> <strong>Spawn Point</strong> that&#8217;s not adjacent to the Target Zone, they regain 2 strength.</p>
+<p>The attacker gains 2 VP and 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.</p>
 </li>
 <li>
-<p>Choose one of the following:</p>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>Eliminate: Gain 2 VP.</p>
-</li>
-<li>
-<p>Research: Gain 1 VP and 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.</p>
-</li>
-</ol>
-</div>
+<p>Move the defender to any <span class="image"><img src="icons/spawn.png" alt="Spawn Point" width="23" title="Spawn Point"></span> <strong>Spawn Point</strong> that&#8217;s not adjacent to the Target Zone, they have 2 strength.</p>
 </li>
 </ol>
 </div>
@@ -1090,7 +1117,7 @@ This changes depending on the terrain spaces where combat is happening.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.5<br>
-Last updated 2020-02-23 07:42:59 -0300
+Last updated 2020-02-23 08:07:14 -0300
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">

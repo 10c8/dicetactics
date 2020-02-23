@@ -59,6 +59,11 @@ WARNING: At the start of the game, only the bottom {icon-spawn} *Spawn Points* a
 == Units
 Each Unit is represented by a six-sided die. The value shown on top of them represents their current strength.
 
+[.right]
+image::images/squad-img.png[Squads, title="Squads", width=200, caption="Figure 2. ", role="rel th right"]
+[.right]
+image::images/tank-img.png[Tanks, title="Tanks", width=242, caption="Figure 1. ", role="rel th right"]
+
 
 Unit Types::
     {icon-squad} Squad:::
@@ -83,6 +88,13 @@ Unit Types::
         Motorized::::
             No more than once, after moving during a _March_, this Unit may make 1 free movement.
 
+[.right]
+image::images/supply.png[Supply, title="Supply", width=200, role="rel th right"]
+
+Supply::
+    Each player has a supply, it stores the {icon-tank} *Tanks* available for _Upgrades_. +
+    Up to 2 {icon-tank} *Tanks* can be stored in the supply at any time.
+
 WARNING: A Unit can never have more than 6 strength.
 
 WARNING: As long as a player is controlling more than 2 {icon-tank} *Tanks*, whenever one of those is destroyed, instead of being added to the player's supply, it is permanently removed from the game.
@@ -97,18 +109,18 @@ Player Actions::
         The movements may be divided between Units, but never between actions.
         
     Attack:::
-        Choose a *Unit* to attack with (the "attacker") and an enemy target *Unit* that's within range (the "defender"). +
+        Choose a Unit to attack with (the "attacker") and an enemy target Unit that's within range (the "defender"). +
         The player that's attacking does as follows, in order:
         . The defender takes losses equal to the attackers strength + 1, minus their strength.
             .. If the attacker's strength is equal to, or less than the defender's, the defender takes 2 losses.
         . The defender does a _<<counter-attack>>_.
-        . Once an involved *Unit*'s strength reaches 0, they are defeated.
-        . If the attacker was defeated, the opponent gains 1 VP. Move the Unit to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they regain 2 strength.
+        . Once an involved Unit's strength reaches 0, they are defeated.
+        . If the attacker was defeated:
+            .. The opponent gains 1 VP.
+            .. Move the attacker to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they have 2 strength.
         . If the defender was defeated:
-            .. Move the defender to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they regain 2 strength.
-            .. Choose one of the following:
-                ... Eliminate: Gain 2 VP.
-                ... Research: Gain 1 VP and 1 {icon-resource} *Resource*.
+            .. The attacker gains 2 VP and 1 {icon-resource} *Resource*.
+            .. Move the defender to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they have 2 strength.
         . Otherwise, if the defender is in a Village, Tower or Ballista, move it to any adjacent space, as long as that does not result in them being closer to the attacker.
 
 WARNING: Units that recently respawned cannot act until the next turn.
