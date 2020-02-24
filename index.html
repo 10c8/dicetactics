@@ -442,7 +442,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Dice Tactics</h1>
 <div class="details">
 <span id="author" class="author">William F. de Araújo &lt;williampigmeu@gmail.com&gt;</span><br>
-<span id="revnumber">version 0.5,</span>
+<span id="revnumber">version 0.6,</span>
 <span id="revdate">02-23-2020</span>
 </div>
 <div id="toc" class="toc2">
@@ -451,6 +451,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#truesetting-up-the-battlefield">Setting Up the Battlefield</a></li>
 <li><a href="#trueunits">Units</a></li>
 <li><a href="#trueplayer-turns">Player Turns</a></li>
+<li><a href="#trueaction-priority">Action Priority</a></li>
 <li><a href="#truethe-battlefield">The Battlefield</a></li>
 <li><a href="#truecontests">Contests</a></li>
 <li><a href="#trueending-the-game">Ending the Game</a></li>
@@ -488,13 +489,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Add 2 <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> to each Player&#8217;s Supply.</p>
 </li>
 <li>
-<p>Give each player 4 <span class="image"><img src="icons/squad.png" alt="Squad" width="23" title="Squad"></span> <strong>Squads</strong> and 3 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong>.</p>
+<p>Give each player 8 <span class="image"><img src="icons/squad.png" alt="Squad" width="23" title="Squad"></span> <strong>Squads</strong> and 3 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong>.</p>
 </li>
 <li>
 <p>Flip a coin to determine the <strong>first</strong> player.</p>
 </li>
 <li>
-<p>Starting with the <strong>second</strong> player, each player chooses a side, then places all of their <span class="image"><img src="icons/squad.png" alt="Squad" width="23" title="Squad"></span> <strong>Squads</strong> on that side&#8217;s <span class="image"><img src="icons/spawn.png" alt="Spawn Point" width="23" title="Spawn Point"></span> <strong>Spawn Points</strong>.</p>
+<p>Starting with the <strong>second</strong> player, each player chooses a bottom corner:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Place 4 of your <span class="image"><img src="icons/squad.png" alt="Squad" width="23" title="Squad"></span> <strong>Squads</strong> on that corner&#8217;s <span class="image"><img src="icons/spawn.png" alt="Spawn Point" width="23" title="Spawn Point"></span> <strong>Spawn Points</strong>, and place the remaining on the <strong>diagonally</strong> opposite corner&#8217;s <span class="image"><img src="icons/spawn.png" alt="Spawn Point" width="23" title="Spawn Point"></span> <strong>Spawn Points</strong>.</p>
+</li>
+</ol>
+</div>
 </li>
 <li>
 <p>Deal 4 <strong>Action Cards</strong> to each player. Each player keeps one and hands the rest to the other. Repeat until each player has picked 2 cards. Those form their hands. The rest of the cards go back into the <strong>Action Card</strong> deck and it is shuffled.</p>
@@ -644,7 +652,7 @@ As long as a player is controlling more than 2 <span class="image"><img src="ico
 <h2 id="trueplayer-turns"><a class="anchor" href="#trueplayer-turns"></a>Player Turns</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>During their turn, a player can take up to 2 actions. The same action may be taken more than once.</p>
+<p>During their turn, a player can take up to 3 actions. The same action may be taken more than once.</p>
 </div>
 <div class="dlist">
 <dl>
@@ -684,10 +692,10 @@ The player that&#8217;s attacking does as follows, in order:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>The opponent gains 1 VP.</p>
+<p>The attacker is removed from the battlefield.</p>
 </li>
 <li>
-<p>Move the attacker to any <span class="image"><img src="icons/spawn.png" alt="Spawn Point" width="23" title="Spawn Point"></span> <strong>Spawn Point</strong> that&#8217;s not adjacent to the Target Zone, they have 2 strength.</p>
+<p>The opponent gains 1 VP.</p>
 </li>
 </ol>
 </div>
@@ -697,16 +705,29 @@ The player that&#8217;s attacking does as follows, in order:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>The attacker gains 2 VP and 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.</p>
+<p>The defender is removed from the battlefield.</p>
 </li>
 <li>
-<p>Move the defender to any <span class="image"><img src="icons/spawn.png" alt="Spawn Point" width="23" title="Spawn Point"></span> <strong>Spawn Point</strong> that&#8217;s not adjacent to the Target Zone, they have 2 strength.</p>
+<p>The attacker gains 2 VP and 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
 <p>Otherwise, if the defender is in a Village, Tower or Ballista, move it to any adjacent space, as long as that does not result in them being closer to the attacker.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Prep</dt>
+<dd>
+<p>Draw an <strong>Action Card</strong>, then discard your hand down to 2 cards.<br>
+Then, if the <strong>Action Card</strong> deck is empty, take the discard pile and shuffle it to make a new one.</p>
+</dd>
+<dt class="hdlist1">Bolster</dt>
+<dd>
+<p>Spawn a 2 strength <span class="image"><img src="icons/squad.png" alt="Squad" width="23" title="Squad"></span> <strong>Squad</strong> on any <span class="image"><img src="icons/spawn.png" alt="Spawn Point" width="23" title="Spawn Point"></span> <strong>Spawn Point</strong> that&#8217;s not adjacent to the Target Zone.</p>
+</dd>
+</dl>
+</div>
 </li>
 </ol>
 </div>
@@ -723,7 +744,19 @@ The player that&#8217;s attacking does as follows, in order:</p>
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Units that recently respawned cannot act until the next turn.
+A player can never have more than 8 Units on the battlefield.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+A Unit cannot <em>Attack</em> the same Unit more than once per turn.
 </td>
 </tr>
 </table>
@@ -779,22 +812,17 @@ Once it&#8217;s been played, the card goes to the <strong>Action Card</strong> d
 </dd>
 <dt class="hdlist1">Forward!</dt>
 <dd>
-<p>Do a <em>March</em> action, but you cannot move the same Unit more than once.<br>
-<em>(<span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> do not get to make any free movement).</em></p>
+<p>Choose up to 4 different allied Units and make up to 2 movements with each.<br>
+<em>(<span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> do not get to make any free movement.)</em></p>
 </dd>
 <dt class="hdlist1">Sabotage</dt>
 <dd>
-<p>Pay 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.<br>
-Make a single movement with an enemy Unit.<br>
-<br>
-<em>- OR -</em><br>
-<br>
-Pay 2 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong>.<br>
-Make up to 3 movements with a single enemy Unit.</p>
+<p>Pay up to 2 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong>.<br>
+Move a single enemy Unit twice per <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong> spent.</p>
 </dd>
 <dt class="hdlist1">Exhaustion</dt>
 <dd>
-<p>During the opponent&#8217;s next turn, they make -1 movement on their <em>March</em> action(s).</p>
+<p>During the opponent&#8217;s next turn, they make -2 movements on their <em>March</em> action(s).</p>
 </dd>
 <dt class="hdlist1">Fuel Shortage</dt>
 <dd>
@@ -803,7 +831,7 @@ During their next turn, the opponent cannot move any <span class="image"><img sr
 </dd>
 <dt class="hdlist1">Bullseye</dt>
 <dd>
-<p>On your next <em>Attack</em> action during this turn, the defender takes +1 loss.</p>
+<p>On your next <em>Attack</em> action during this turn, the defender takes +2 losses.</p>
 </dd>
 <dt class="hdlist1">Supply and Demand</dt>
 <dd>
@@ -814,21 +842,55 @@ During their next turn, the opponent cannot move any <span class="image"><img sr
 <p>Pay 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.<br>
 The <span class="image"><img src="icons/operation.png" alt="Operation Marker" width="24" title="Operation Marker"></span> <strong>Contest Marker</strong> advances or goes back one space.</p>
 </dd>
-<dt class="hdlist1">Navigation Expert</dt>
+<dt class="hdlist1">Air Support</dt>
 <dd>
-<p>On your <em>March</em> action(s) during this turn, ignore extra movement costs.<br>
-<em>(<span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> still can&#8217;t enter <span class="image"><img src="icons/village.jpg" alt="Village" width="23" title="Village"></span> <strong>Villages</strong>, <span class="image"><img src="icons/tower.png" alt="Tower" width="23" title="Tower"></span> <strong>Towers</strong> or <span class="image"><img src="icons/water.png" alt="Water" width="23" title="Water"></span> <strong>Water</strong>.)</em></p>
+<p>Pay 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.<br>
+Every Unit that&#8217;s inside the Target Zone takes 2 losses.</p>
 </dd>
 <dt class="hdlist1">Take Cover!</dt>
 <dd>
 <p>Pay 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.<br>
-During the opponent&#8217;s next turn, your defending Units have +1 strength.<br>
+During the opponent&#8217;s next turn, your defending Units have +2 strength.<br>
 <em>(A Unit can never have more than 6 strength.)</em></p>
 </dd>
 </dl>
 </div>
 </dd>
 </dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="trueaction-priority"><a class="anchor" href="#trueaction-priority"></a>Action Priority</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Every turn happens in this order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You may discard 1 Action Card from your hand to get 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong>.</p>
+</li>
+<li>
+<p>Then resolve player actions: <em>Marching</em>, <em>Attacking</em> and playing an Action Card can be done in any order.</p>
+</li>
+<li>
+<p>Lastly, resolve end-of-turn actions:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>First, you can play an Action Card if you have not played one yet.</p>
+</li>
+<li>
+<p>Then <span class="image"><img src="icons/ballista.png" alt="Ballista" width="23" title="Ballista"></span> <strong>Ballistas</strong> may be used.</p>
+</li>
+<li>
+<p>Lastly <span class="image"><img src="icons/windmill.png" alt="Windmill" width="23" title="Windmill"></span> <strong>Windmills</strong>, <span class="image"><img src="icons/village.jpg" alt="Village" width="23" title="Village"></span> <strong>Villages</strong> and <span class="image"><img src="icons/tower.png" alt="Tower" width="23" title="Tower"></span> <strong>Towers</strong> are resolved in any order.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -887,15 +949,14 @@ While standing a <span class="image"><img src="icons/hill.png" alt="Hill" width=
 <p>At the end of your turn, a Unit that&#8217;s standing in a <span class="image"><img src="icons/village.jpg" alt="Village" width="23" title="Village"></span> <strong>Village</strong> may take one of the following actions:</p>
 <div class="dlist">
 <dl>
+<dt class="hdlist1">Rest</dt>
+<dd>
+<p>The Unit regains 2 strength, up to a maximum of 4.</p>
+</dd>
 <dt class="hdlist1">Hire</dt>
 <dd>
 <p>Pay up to 2 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong> to hire mercenaries.<br>
 The Unit gains +1 strength per <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong> spent, up to a maximum of 6.</p>
-</dd>
-<dt class="hdlist1">Prep</dt>
-<dd>
-<p>Draw an <strong>Action Card</strong>, then discard your hand down to 2 cards.<br>
-Then, if the <strong>Action Card</strong> deck is empty, take the discard pile and shuffle it to make a new one.</p>
 </dd>
 </dl>
 </div>
@@ -913,11 +974,6 @@ At the end of your turn, a Unit that&#8217;s standing in a <span class="image"><
 The strength of the <span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tank</strong> is equal to the old <span class="image"><img src="icons/squad.png" alt="Squad" width="23" title="Squad"></span> <strong>Squad</strong>'s strength + 2.<br>
 The old <span class="image"><img src="icons/squad.png" alt="Squad" width="23" title="Squad"></span> <strong>Squad</strong> goes into the player&#8217;s supply if possible.<br>
 <em>(A Unit that&#8217;s standing in a <span class="image"><img src="icons/village.jpg" alt="Village" width="23" title="Village"></span> <strong>Village</strong> or a <span class="image"><img src="icons/tower.png" alt="Tower" width="23" title="Tower"></span> <strong>Tower</strong> cannot be upgraded.)</em></p>
-</dd>
-<dt class="hdlist1">Relocate</dt>
-<dd>
-<p>Make up to 2 movements with a single Unit.<br>
-<em>(<span class="image"><img src="icons/tank.png" alt="Tank" width="23" title="Tank"></span> <strong>Tanks</strong> do not get to make a free movement.)</em></p>
 </dd>
 </dl>
 </div>
@@ -937,8 +993,8 @@ The enemy Unit takes 3 losses and <strong>cannot</strong> <em>counter-attack</em
 </dd>
 <dt class="hdlist1"><span class="image"><img src="icons/windmill.png" alt="Windmill" width="42" title="Windmill"></span> Windmill</dt>
 <dd>
-<p>A Unit cannot enter a Windmill space if there&#8217;s at least 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong> on it.<br>
-At the end of your turn, if there is at least one Unit adjacent to a Windmill, take one <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong> from it.</p>
+<p>A Unit cannot enter a <span class="image"><img src="icons/windmill.png" alt="Windmill" width="23" title="Windmill"></span> <strong>Windmill</strong> space if there&#8217;s at least 1 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong> on it.<br>
+At the end of your turn, if there is at least one Unit adjacent to a <span class="image"><img src="icons/windmill.png" alt="Windmill" width="23" title="Windmill"></span> <strong>Windmill</strong>, take one <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resource</strong> from it.</p>
 </dd>
 </dl>
 </div>
@@ -1041,6 +1097,9 @@ Terrain actions are always free.<br>
 <li>
 <p>Place the <span class="image"><img src="icons/operation.png" alt="Operation Marker" width="24" title="Operation Marker"></span> <strong>Contest Marker</strong> on the new Target Zone&#8217;s <span class="image"><img src="icons/flag.png" alt="Flag" width="23" title="Flag"></span> <strong>Flag</strong>.</p>
 </li>
+<li>
+<p>Refill all <span class="image"><img src="icons/windmill.png" alt="Windmill" width="23" title="Windmill"></span> <strong>Windmills</strong> up to 3 <span class="image"><img src="icons/resource.png" alt="Resource" width="25" title="Resource"></span> <strong>Resources</strong> each.</p>
+</li>
 </ol>
 </div>
 <div class="admonitionblock warning">
@@ -1081,7 +1140,7 @@ A "zone" is a 5x5 area represented by a striped outline around a <span class="im
 <p>All six <span class="image"><img src="icons/flag.png" alt="Flag" width="23" title="Flag"></span> <strong>Flags</strong> have been <span class="image"><img src="icons/blocked.png" alt="Blocked" width="25" title="Blocked"></span> <strong>Contested</strong>.</p>
 </li>
 <li>
-<p>A player has reached 10 VPs.</p>
+<p>A player has reached 14 VPs.</p>
 </li>
 </ol>
 </div>
@@ -1128,8 +1187,8 @@ This changes depending on the terrain spaces where combat is happening.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 0.5<br>
-Last updated 2020-02-23 08:21:13 -0300
+Version 0.6<br>
+Last updated 2020-02-23 21:04:14 -0300
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">

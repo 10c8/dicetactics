@@ -1,6 +1,6 @@
 = Dice Tactics
 William F. de Araújo <williampigmeu@gmail.com>
-v0.5, 02-23-2020
+v0.6, 02-23-2020
 :toc: left
 :icons: font
 
@@ -40,6 +40,22 @@ v0.5, 02-23-2020
 <script src="https://kit.fontawesome.com/04675bbc54.js" crossorigin="anonymous"></script>
 ++++
 
+////
+
+  TODO:
+  
+  1. Gameplay feels too slow.
+    a. More units or more movement.
+    b. Make the map smaller?
+  2. Reword the "Forward!" card.
+  3. Cards are too weak.
+  4. Refill Windmills. (After Contests, maybe?)
+  5. Rework Towers and Villages.
+    a. Terrain actions are powerful, but having 1 less unit to play with, not so much.
+    b. Move upgrades to cards?
+    c. Add more Towers/Villages?
+
+////
 
 == Setting Up the Battlefield
 [.right]
@@ -50,9 +66,10 @@ Before you can start fighting for control, you need to prepare the game board:
 . Set the {icon-target} *Target* die to 2, that's the current Target Zone.
 . Place the {icon-marker} *Contest Marker* on the Target Zone's {icon-flag} *Flag*.
 . Add 2 {icon-tank} *Tanks* to each Player's Supply.
-. Give each player 4 {icon-squad} *Squads* and 3 {icon-resource} *Resources*.
+. Give each player 8 {icon-squad} *Squads* and 3 {icon-resource} *Resources*.
 . Flip a coin to determine the *first* player.
-. Starting with the *second* player, each player chooses a side, then places all of their {icon-squad} *Squads* on that side's {icon-spawn} *Spawn Points*.
+. Starting with the *second* player, each player chooses a bottom corner:
+    .. Place 4 of your {icon-squad} *Squads* on that corner's {icon-spawn} *Spawn Points*, and place the remaining on the *diagonally* opposite corner's {icon-spawn} *Spawn Points*.
 . Deal 4 *Action Cards* to each player. Each player keeps one and hands the rest to the other. Repeat until each player has picked 2 cards. Those form their hands. The rest of the cards go back into the *Action Card* deck and it is shuffled.
 . The *first* player can now take their turn!
 
@@ -103,7 +120,7 @@ WARNING: As long as a player is controlling more than 2 {icon-tank} *Tanks*, whe
 
 
 == Player Turns 
-During their turn, a player can take up to 2 actions. The same action may be taken more than once.
+During their turn, a player can take up to 3 actions. The same action may be taken more than once.
 
 Player Actions::
     March:::
@@ -118,14 +135,21 @@ Player Actions::
         . The defender does a _<<counter-attack>>_.
         . Once an involved Unit's strength reaches 0, they are defeated.
         . If the attacker was defeated:
+            .. The attacker is removed from the battlefield.
             .. The opponent gains 1 VP.
-            .. Move the attacker to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they have 2 strength.
         . If the defender was defeated:
+            .. The defender is removed from the battlefield.
             .. The attacker gains 2 VP and 1 {icon-resource} *Resource*.
-            .. Move the defender to any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone, they have 2 strength.
         . Otherwise, if the defender is in a Village, Tower or Ballista, move it to any adjacent space, as long as that does not result in them being closer to the attacker.
+    
+    Prep::::
+        Draw an *Action Card*, then discard your hand down to 2 cards. +
+        Then, if the *Action Card* deck is empty, take the discard pile and shuffle it to make a new one.
+        
+    Bolster::::
+        Spawn a 2 strength {icon-squad} *Squad* on any {icon-spawn} *Spawn Point* that's not adjacent to the Target Zone.
 
-WARNING: Units that recently respawned cannot act until the next turn.
+WARNING: A player can never have more than 8 Units on the battlefield.
 
 WARNING: A Unit cannot _Attack_ the same Unit more than once per turn.
 
@@ -146,30 +170,25 @@ Action Cards::
     Emergency Upgrade:::
         Pay 1 {icon-resource} *Resource*. +
         _Upgrade_ one of your Units into a 4 strength {icon-tank} *Tank*. +
-        __(You can do this even if you have no {icon-tank} *Tanks* on your supply.)__
+        _(You can do this even if you have no {icon-tank} *Tanks* on your supply.)_
 
     Forward!:::
-        Do a _March_ action, but you cannot move the same Unit more than once. +
-        __({icon-tank} *Tanks* do not get to make any free movement).__
+        Choose up to 4 different allied Units and make up to 2 movements with each. +
+        _({icon-tank} *Tanks* do not get to make any free movement.)_
 
     Sabotage:::
-        Pay 1 {icon-resource} *Resource*. +
-        Make a single movement with an enemy Unit. +
-        {empty} +
-        _- OR -_ +
-        {empty} +
-        Pay 2 {icon-resource} *Resources*. +
-        Make up to 3 movements with a single enemy Unit.
+        Pay up to 2 {icon-resource} *Resources*. +
+        Move a single enemy Unit twice per {icon-resource} *Resource* spent.
 
     Exhaustion:::
-        During the opponent's next turn, they make -1 movement on their _March_ action(s).
+        During the opponent's next turn, they make -2 movements on their _March_ action(s).
 
     Fuel Shortage:::
         Pay 1 {icon-resource} *Resource*. +
         During their next turn, the opponent cannot move any {icon-tank} *Tanks* with their _March_ action.
 
     Bullseye:::
-        On your next _Attack_ action during this turn, the defender takes +1 loss.
+        On your next _Attack_ action during this turn, the defender takes +2 losses.
 
     Supply and Demand:::
         During your opponent's next turn, _Upgrading_ costs +1 {icon-resource} *Resource*.
@@ -178,14 +197,25 @@ Action Cards::
         Pay 1 {icon-resource} *Resource*. +
         The {icon-marker} *Contest Marker* advances or goes back one space.
         
-    Navigation Expert:::
-        On your _March_ action(s) during this turn, ignore extra movement costs. +
-        _({icon-tank} *Tanks* still can't enter {icon-village} *Villages*, {icon-tower} *Towers* or {icon-water} *Water*.)_
+    Air Support:::
+        Pay 1 {icon-resource} *Resource*. +
+        Every Unit that's inside the Target Zone takes 2 losses.
     
     Take Cover!:::
         Pay 1 {icon-resource} *Resource*. +
-        During the opponent's next turn, your defending Units have +1 strength. +
+        During the opponent's next turn, your defending Units have +2 strength. +
         _(A Unit can never have more than 6 strength.)_
+
+
+== Action Priority
+Every turn happens in this order:
+
+. You may discard 1 Action Card from your hand to get 1 {icon-resource} *Resource*.
+. Then resolve player actions: _Marching_, _Attacking_ and playing an Action Card can be done in any order.
+. Lastly, resolve end-of-turn actions:
+    .. First, you can play an Action Card if you have not played one yet.
+    .. Then {icon-ballista} *Ballistas* may be used.
+    .. Lastly {icon-windmill} *Windmills*, {icon-village} *Villages* and {icon-tower} *Towers* are resolved in any order.
 
 
 == The Battlefield
@@ -225,13 +255,12 @@ Terrain Types::
     {icon-village-big} Village:::
         At the end of your turn, a Unit that's standing in a {icon-village} *Village* may take one of the following actions:
         
+        Rest::::
+            The Unit regains 2 strength, up to a maximum of 4.
+        
         Hire::::
             Pay up to 2 {icon-resource} *Resources* to hire mercenaries. +
             The Unit gains +1 strength per {icon-resource} *Resource* spent, up to a maximum of 6.
-            
-        Prep::::
-            Draw an *Action Card*, then discard your hand down to 2 cards. +
-            Then, if the *Action Card* deck is empty, take the discard pile and shuffle it to make a new one.
     
     {icon-tower-big} Tower:::
         While standing in a {icon-tower} *Tower*, a Unit has +2 range. +
@@ -243,10 +272,6 @@ Terrain Types::
             The strength of the {icon-tank} *Tank* is equal to the old {icon-squad} *Squad*'s strength + 2. +
             The old {icon-squad} *Squad* goes into the player's supply if possible. +
             _(A Unit that's standing in a {icon-village} *Village* or a {icon-tower} *Tower* cannot be upgraded.)_
-        
-        Relocate::::
-            Make up to 2 movements with a single Unit. +
-            _({icon-tank} *Tanks* do not get to make a free movement.)_
 
     {icon-ballista-big} Ballista:::
         At the end of your turn, a Unit that's standing in a {icon-ballista} *Ballista* may take the following action:
@@ -256,8 +281,8 @@ Terrain Types::
             The enemy Unit takes 3 losses and *cannot* _counter-attack_.
     
     {icon-windmill-big} Windmill:::
-        A Unit cannot enter a Windmill space if there's at least 1 {icon-resource} *Resource* on it. +
-        At the end of your turn, if there is at least one Unit adjacent to a Windmill, take one {icon-resource} *Resource* from it.
+        A Unit cannot enter a {icon-windmill} *Windmill* space if there's at least 1 {icon-resource} *Resource* on it. +
+        At the end of your turn, if there is at least one Unit adjacent to a {icon-windmill} *Windmill*, take one {icon-resource} *Resource* from it.
     
 WARNING: You cannot _Upgrade_ if you don't have any {icon-tank} *Tanks* in your supply.
 
@@ -286,6 +311,7 @@ Once the {icon-marker} *Contest Marker* reaches the red spot of the Contest Trac
 . Zone 5 is the new Target Zone.
     .. If that zone was already {icon-blocked} *Contested*, roll the {icon-target} *Target* die to determine the new Target Zone.
 . Place the {icon-marker} *Contest Marker* on the new Target Zone's {icon-flag} *Flag*.
+. Refill all {icon-windmill} *Windmills* up to 3 {icon-resource} *Resources* each.
 
 WARNING: A zone containing a {icon-blocked} *Contested* cube cannot be a Target Zone.
 
@@ -296,7 +322,7 @@ NOTE: A "zone" is a 5x5 area represented by a striped outline around a {icon-fla
 The game ends once:
 
 . All six {icon-flag} *Flags* have been {icon-blocked} *Contested*.
-. A player has reached 10 VPs.
+. A player has reached 14 VPs.
 
 **The player with the most VPs is the winner!** +
 
